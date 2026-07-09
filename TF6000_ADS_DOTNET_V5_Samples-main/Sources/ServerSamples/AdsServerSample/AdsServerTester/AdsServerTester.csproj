@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Globals" />
+  <PropertyGroup>
+    <RootNamespace>AdsServerTester</RootNamespace>
+    <AssemblyName>AdsServerTester</AssemblyName>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AdsSampleServerTester</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Beckhoff.TwinCAT.Ads.Server" Version="6.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdsServerConsoleApp\AdsServerConsoleApp.csproj" />
+  </ItemGroup>
+</Project>

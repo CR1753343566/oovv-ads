@@ -1,0 +1,67 @@
+## .NET / Visual Studio
+
+# Build results
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# Build artifacts
+*.pdb
+*.dll
+*.exe
+!**/lib/**/*.dll
+
+## TwinCAT / ADS
+
+*.tmc
+*.tmcRefac
+*.library
+*.compiled-library
+*.compileinfo
+*.tclrs
+*.tnzip
+*.tpy
+*.tpzip
+*.tsproj.bak
+*.tsproj.bk?
+*.tszip
+*.xti.bk?
+*.xti.bak
+_Boot/
+_CompileInfo/
+_Libraries/
+_ModuleInstall/
+
+## Misc
+
+*.bak
+*.zip
+*.tmp
+Thumbs.db
+.DS_Store

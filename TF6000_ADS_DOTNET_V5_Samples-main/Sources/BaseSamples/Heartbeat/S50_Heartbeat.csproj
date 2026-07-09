@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <TargetFramework>net80</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>S50_Heartbeat.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Beckhoff.TwinCAT.Ads" Version="7.*" />
+  </ItemGroup>
+</Project>

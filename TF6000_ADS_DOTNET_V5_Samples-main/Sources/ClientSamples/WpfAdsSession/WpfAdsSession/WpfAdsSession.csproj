@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>    
+    <UseWPF>true</UseWPF>    
+    <StartupObject>AdsSessionTest.App</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Alias.ico" />
+    <None Remove="Resources\Array.ico" />
+    <None Remove="Resources\DataType.ico" />
+    <None Remove="Resources\Enum.ico" />
+    <None Remove="Resources\Primitive.ico" />
+    <None Remove="Resources\String.ico" />
+    <None Remove="Resources\Struct.ico" />
+    <None Remove="Resources\Symbol.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="10.0.4" />
+    <PackageReference Include="System.Reactive" Version="6.1.0" />
+    <PackageReference Include="Beckhoff.TwinCAT.Ads" Version="7.*" />
+	  <PackageReference Include="Beckhoff.TwinCAT.Ads.Reactive" Version="7.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Alias.ico" />
+    <Resource Include="Resources\Array.ico" />
+    <Resource Include="Resources\DataType.ico" />
+    <Resource Include="Resources\Enum.ico" />
+    <Resource Include="Resources\Primitive.ico" />
+    <Resource Include="Resources\String.ico" />
+    <Resource Include="Resources\Struct.ico" />
+    <Resource Include="Resources\Symbol.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>

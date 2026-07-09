@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net80</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>S80_Reactive.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Beckhoff.TwinCAT.Ads" Version="7.*" />
+    <PackageReference Include="Beckhoff.TwinCAT.Ads.Reactive" Version="7.*" />
+  </ItemGroup>
+</Project>
