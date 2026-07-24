@@ -20,7 +20,8 @@ namespace oovv_ads_control.ViewModels
         private readonly AdsConnectionManager _connectionManager = new();
         private readonly Dispatcher _dispatcher = Dispatcher.CurrentDispatcher;
 
-        private string _netId = AmsNetId.Local.ToString();
+        //private string _netId = AmsNetId.Local.ToString();
+        private string _netId = "10.241.133.46.1.1";
         private string _port = "851";
         private string _connectionStateText = ConnectionState.None.ToString();
         private string _adsStateText = AdsState.Invalid.ToString();
