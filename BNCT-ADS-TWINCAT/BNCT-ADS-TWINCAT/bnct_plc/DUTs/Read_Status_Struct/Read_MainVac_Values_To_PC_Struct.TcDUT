@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Read_MainVac_Values_To_PC_Struct" Id="{3fd5ddd7-6fe2-40cd-b461-2fd801f24615}">
+    <Declaration><![CDATA[TYPE Read_MainVac_Values_To_PC_Struct :
+UNION
+	S_MainVacValues_To_PC:S_MainVacValues_To_PC_Struct;
+END_UNION
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

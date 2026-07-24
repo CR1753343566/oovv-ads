@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_ARValues_To_PC_Struct" Id="{9b373de4-943b-4a6c-be11-ea1ee2705957}">
+    <Declaration><![CDATA[TYPE S_ARValues_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ; //注入线隔断阀开到位
+	PARAM001:BOOL ; //注入线隔断阀关到位
+	PARAM002:BOOL ; //注入线隔断阀正在开
+	PARAM003:BOOL ; //注入线隔断阀正在关
+	PARAM004:BOOL ; //注入线隔断阀开启操作错误
+	PARAM005:BOOL ; //注入线隔断阀关闭操作错误
+	PARAM006:BOOL ; //束流线隔断阀 1 开到位
+	PARAM007:BOOL ; //束流线隔断阀 1 关到位
+	PARAM008:BOOL ; //束流线隔断阀 1 正在开
+	PARAM009:BOOL ; //束流线隔断阀 1 正在关
+	PARAM010:BOOL ; //束流线隔断阀 1 开启操作错误
+	PARAM011:BOOL ; //束流线隔断阀 1 关闭操作错误
+	PARAM012:BOOL ; //束流线隔断阀 2 开到位
+	PARAM013:BOOL ; //束流线隔断阀 2 关到位
+	PARAM014:BOOL ; //束流线隔断阀 2 正在开
+	PARAM015:BOOL ; //束流线隔断阀 2 正在关
+	PARAM016:BOOL ; //束流线隔断阀 2 开启操作错误
+	PARAM017:BOOL ; //束流线隔断阀 2 关闭操作错误
+	PARAM018:BOOL ; //束流线隔断阀 3 开到位
+	PARAM019:BOOL ; //束流线隔断阀 3 关到位
+	PARAM020:BOOL ; //束流线隔断阀 3 正在开
+	PARAM021:BOOL ; //束流线隔断阀 3 正在关
+	PARAM022:BOOL ; //束流线隔断阀 3 开启操作错误
+	PARAM023:BOOL ; //束流线隔断阀 3 关闭操作错误
+	PARAM024:BOOL ; //注入线 FC 拉出到位
+	PARAM025:BOOL ; //注入线 FC 插入到位
+	PARAM026:BOOL ; //注入线 FC 正在拉出
+	PARAM027:BOOL ; //注入线 FC 正在插入
+	PARAM028:BOOL ; //注入线 FC 拉出操作错误
+	PARAM029:BOOL ; //注入线 FC 插入操作错误
+	PARAM030:BOOL ; //内靶拉出到位
+	PARAM031:BOOL ; //内靶插入到位
+	PARAM032:BOOL ; //内靶正在拉出
+	PARAM033:BOOL ; //内靶正在插入
+	PARAM034:BOOL ; //内靶拉出操作错误
+	PARAM035:BOOL ; //内靶插入操作错误
+	PARAM036:BOOL ; //引出 FC 拉出到位
+	PARAM037:BOOL ; //引出 FC 插入到位
+	PARAM038:BOOL ; //引出 FC 正在拉出
+	PARAM039:BOOL ; //引出 FC 正在插入
+	PARAM040:BOOL ; //引出 FC 拉出操作错误
+	PARAM041:BOOL ; //引出 FC 插入操作错误
+	PARAM042:BOOL ; //荧光靶 1 拉出到位
+	PARAM043:BOOL ; //荧光靶 1 插入到位
+	PARAM044:BOOL ; //荧光靶 1 正在拉出
+	PARAM045:BOOL ; //荧光靶 1 正在插入
+	PARAM046:BOOL ; //荧光靶 1 拉出操作错误
+	PARAM047:BOOL ; //荧光靶 1 插入操作错误
+	PARAM048:BOOL ; //荧光靶 2 拉出到位
+	PARAM049:BOOL ; //荧光靶 2 插入到位
+	PARAM050:BOOL ; //荧光靶 2 正在拉出
+	PARAM051:BOOL ; //荧光靶 2 正在插入
+	PARAM052:BOOL ; //荧光靶 2 拉出操作错误
+	PARAM053:BOOL ; //荧光靶 2 插入操作错误
+	PARAM054:BOOL ; //荧光靶 3 拉出到位
+	PARAM055:BOOL ; //荧光靶 3 插入到位
+	PARAM056:BOOL ; //荧光靶 3 正在拉出
+	PARAM057:BOOL ; //荧光靶 3 正在插入
+	PARAM058:BOOL ; //荧光靶 3 拉出操作错误
+	PARAM059:BOOL ; //荧光靶 3 插入操作错误
+	PARAM060:BOOL ; //双丝 1 拉出到位
+	PARAM061:BOOL ; //双丝 1 插入到位
+	PARAM062:BOOL ; //双丝 1 正在拉出
+	PARAM063:BOOL ; //双丝 1 正在插入
+	PARAM064:BOOL ; //双丝 1 拉出操作错误
+	PARAM065:BOOL ; //双丝 1 插入操作错误
+	PARAM066:BOOL ; //双丝 2 拉出到位
+	PARAM067:BOOL ; //双丝 2 插入到位
+	PARAM068:BOOL ; //双丝 2 正在拉出
+	PARAM069:BOOL ; //双丝 2 正在插入
+	PARAM070:BOOL ; //双丝 2 拉出操作错误
+	PARAM071:BOOL ; //双丝 2 插入操作错误
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

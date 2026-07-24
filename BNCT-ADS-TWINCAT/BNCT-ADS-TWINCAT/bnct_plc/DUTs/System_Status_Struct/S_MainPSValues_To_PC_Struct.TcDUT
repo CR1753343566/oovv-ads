@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_MainPSValues_To_PC_Struct" Id="{6a883c63-5c23-4035-9eff-7b06dd092ba5}">
+    <Declaration><![CDATA[TYPE S_MainPSValues_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ; // 主器电源系统自动运行，TRUE为开启 
+	PARAM001:REAL ; // 正偏转版电源电流设置值（mA） 
+	PARAM002:REAL ; // 正偏转版电源电压设置值（kV） 
+	PARAM003:BOOL ; // 正偏转版电源已开 
+	PARAM004:BOOL ; // 正偏转版电源已关 
+	PARAM005:BOOL ; // 正偏转版电源正在开 
+	PARAM006:BOOL ; // 正偏转版电源正在关 
+	PARAM007:BOOL ; // 正偏转版电源使能到位 
+	PARAM008:BOOL ; // 正偏转版电源停止使能到位 
+	PARAM009:BOOL ; // 正偏转版电源正在使能 
+	PARAM010:BOOL ; // 正偏转版电源正在停止使能 
+	PARAM011:BOOL ; // 正偏转版电源高压状态 
+	PARAM012:BOOL ; // 正偏转版电源故障状态 
+	PARAM013:BOOL ; // 正偏转版电源模式状态 
+	PARAM014:BOOL ; // 正偏转版电源开启操作错误 
+	PARAM015:BOOL ; // 正偏转版电源关闭操作错误 
+	PARAM016:BOOL ; // 正偏转版电源电流设置操作错误 
+	PARAM017:BOOL ; // 正偏转版电源电压设置操作错误
+	PARAM018:REAL ; // 正偏转版电源电流（mA） 
+	PARAM019:REAL ; // 正偏转版电源电压（kV） 
+	PARAM020:REAL ; // 负偏转版电源电流设置值（mA） 
+	PARAM021:REAL ; // 负偏转版电源电压设置值（kV） 
+	PARAM022:BOOL ; // 负偏转版电源已开 
+	PARAM023:BOOL ; // 负偏转版电源已关 
+	PARAM024:BOOL ; // 负偏转版电源正在开 
+	PARAM025:BOOL ; // 负偏转版电源正在关 
+	PARAM026:BOOL ; // 负偏转版电源使能到位 
+	PARAM027:BOOL ; // 负偏转版电源停止使能到位 
+	PARAM028:BOOL ; // 负偏转版电源正在使能 
+	PARAM029:BOOL ; // 负偏转版电源正在停止使能 
+	PARAM030:BOOL ; // 负偏转版电源高压状态 
+	PARAM031:BOOL ; // 负偏转版电源故障状态 
+	PARAM032:BOOL ; // 负偏转版电源模式状态 
+	PARAM033:BOOL ; // 负偏转版电源开启操作错误 
+	PARAM034:BOOL ; // 负偏转版电源关闭操作错误 
+	PARAM035:BOOL ; // 负偏转版电源电流设置操作错误 
+	PARAM036:BOOL ; // 负偏转版电源电压设置操作错误 
+	PARAM037:REAL ; // 负偏转版电源电流（mA） 
+	PARAM038:REAL ; // 负偏转版电源电压（kV） 
+	PARAM039:REAL ; // 主磁铁电源电流设置值（A） 
+	PARAM040:BOOL ; // 主磁铁电源已开 
+	PARAM041:BOOL ; // 主磁铁电源已关 
+	PARAM042:BOOL ; // 主磁铁电源正在开 
+	PARAM043:BOOL ; // 主磁铁电源正在关 
+	PARAM044:REAL ; // 主磁铁电源运行电流（A） 
+	PARAM045:REAL ; // 主磁铁电源运行电压（V） 
+	PARAM046:BOOL ; // TRUE时主磁铁电源故障 
+	PARAM047:BOOL ; // 主磁铁电源电流设置操作错误 
+	PARAM048:REAL ; // 引出磁铁电源电流设置值（A） 
+	PARAM049:BOOL ; // 引出磁铁电源已开 
+	PARAM050:BOOL ; // 引出磁铁电源已关 
+	PARAM051:BOOL ; // 引出磁铁电源正在开 
+	PARAM052:BOOL ; // 引出磁铁电源正在关 
+	PARAM053:REAL ; // 引出磁铁电源运行电流（A） 
+	PARAM054:REAL ; // 引出磁铁电源运行电压（V） 
+	PARAM055:BOOL ; // TRUE时引出磁铁电源故障 
+	PARAM056:BOOL ; // 引出磁铁电源电流设置操作错误 
+	PARAM057:BOOL ; // TRUE时引出磁铁电源通讯正常
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

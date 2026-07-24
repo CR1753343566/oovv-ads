@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_ISVacValues_To_PC_Struct" Id="{dca08cb2-47b9-49a2-a0db-866f735c310d}">
+    <Declaration><![CDATA[TYPE S_ISVacValues_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ; // 离子源低真空自动运行，True代表开 
+	PARAM001:BOOL ; // 离子源高真空自动运行，True代表开 
+	PARAM002:BOOL ; // 角阀2开到位
+	PARAM003:BOOL ; // 角阀2关到位 
+	PARAM004:BOOL ; // 角阀2正在开 
+	PARAM005:BOOL ; // 角阀2正在关 
+	PARAM006:BOOL ; // 角阀2开启操作错误 
+	PARAM007:BOOL ; // 角阀2关闭操作错误 
+	PARAM008:BOOL ; // 角阀3开到位 
+	PARAM009:BOOL ; // 角阀3关到位 
+	PARAM010:BOOL ; // 角阀3正在开 
+	PARAM011:BOOL ; // 角阀3正在关 
+	PARAM012:BOOL ; // 角阀3开启操作错误 
+	PARAM013:BOOL ; // 角阀3关闭操作错误 
+	PARAM014:BOOL ; // 注入线放气阀开到位 
+	PARAM015:BOOL ; // 注入线放气阀关到位 
+	PARAM016:BOOL ; // 注入线放气阀正在开 
+	PARAM017:BOOL ; // 注入线放气阀正在关 
+	PARAM018:BOOL ; // 注入线放气阀开启操作错误 
+	PARAM019:BOOL ; // 注入线放气阀关闭操作错误 
+	PARAM020:BOOL ; // 注入线干泵开到位 
+	PARAM021:BOOL ; // 注入线干泵关到位 
+	PARAM022:BOOL ; // 注入线干泵正在开 
+	PARAM023:BOOL ; // 注入线干泵正在关 
+	PARAM024:BOOL ; // 注入线干泵开启操作错误 
+	PARAM025:BOOL ; // 注入线干泵关闭操作错误 
+	PARAM026:BOOL ; // 分子泵V1达到频率值 
+	PARAM027:BOOL ; // 分子泵V1频率下降到0 
+	PARAM028:BOOL ; // 分子泵V1故障 
+	PARAM029:BOOL ; // 分子泵V1频率上升中 
+	PARAM030:BOOL ; // 分子泵V1频率下降中 
+	PARAM031:BOOL ; // 分子泵V1开启操作错误 
+	PARAM032:BOOL ; // 分子泵V1关闭操作错误 
+	PARAM033:REAL ; // 分子泵V1输出频率（Hz）
+	PARAM034:BOOL ; // 分子泵V3达到频率值 
+	PARAM035:BOOL ; // 分子泵V3频率下降到0 
+	PARAM036:BOOL ; // 分子泵V3故障 
+	PARAM037:BOOL ; // 分子泵V3频率上升中 
+	PARAM038:BOOL ; // 分子泵V3频率下降中 
+	PARAM039:BOOL ; // 分子泵V3开启操作错误 
+	PARAM040:BOOL ; // 分子泵V3关闭操作错误 
+	PARAM041:REAL ; // 分子泵V3输出频率（Hz） 
+	PARAM042:BOOL ; // 分子泵V4达到频率值 
+	PARAM043:BOOL ; // 分子泵V4频率下降到0 
+	PARAM044:BOOL ; // 分子泵V4故障 
+	PARAM045:BOOL ; // 分子泵V4频率上升中 
+	PARAM046:BOOL ; // 分子泵V4频率下降中 
+	PARAM047:BOOL ; // 分子泵V4开启操作错误 
+	PARAM048:BOOL ; // 分子泵V4关闭操作错误
+	PARAM049:REAL ; // 分子泵V4输出频率（Hz） 
+	PARAM050:LREAL ; // 离子源低真空度（mBar） 
+	PARAM051:LREAL ; // 离子源高真空度（mBar） 
+	PARAM052:BOOL ; // 离子源低真空达标 
+	PARAM053:BOOL ; // 离子源高真空达标
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

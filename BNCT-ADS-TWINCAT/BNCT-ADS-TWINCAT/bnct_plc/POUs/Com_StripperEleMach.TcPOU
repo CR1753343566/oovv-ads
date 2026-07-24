@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="Com_StripperEleMach" Id="{b38ab681-5159-45e2-846d-f5ff7449d6fa}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Com_StripperEleMach
+VAR
+	bEM_C_Power_Axis1        : BOOL;
+	fEM_C_AbPos_Axis1        : REAL;
+    fEM_C_AbPosVelo_Axis1    : REAL;
+    bEM_C_AbPosExecute_Axis1 : BOOL;
+    bEM_C_Reset_Axis1        : BOOL;
+	bEM_C_Power_Axis2        : BOOL;
+	fEM_C_AbPos_Axis2        : REAL;
+    fEM_C_AbPosVelo_Axis2    : REAL;
+    bEM_C_AbPosExecute_Axis2 : BOOL;
+    bEM_C_Reset_Axis2        : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="Com_StripperEleMach">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

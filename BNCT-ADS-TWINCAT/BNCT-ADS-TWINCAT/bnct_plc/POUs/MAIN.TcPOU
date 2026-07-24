@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="MAIN" Id="{a9eedbe7-0d1b-4c5c-8022-35bc85c56157}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	Framecmd:ST_FrameCmd;
+	CommandExcute:BOOL;
+	TEST1:UINT;
+TEST2:UINT;
+TEST3:UINT;
+TEST4:UINT;
+TEST5:UINT;
+TEST6:UINT;
+TEST7:UINT;
+TEST8:UINT;
+TEST9:UINT;
+TEST10:UINT;
+TEST11:UINT;
+TEST12:UINT;
+TEST13:UINT;
+TEST14:UINT;
+TEST15:UINT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[TEST1 :=SIZEOF(S_WCValues_To_PC_Struct);
+TEST2:=SIZEOF(S_ARValues_To_PC_Struct);
+TEST3:=SIZEOF(S_ISVacValues_To_PC_Struct);
+TEST4:=SIZEOF(S_MainVacValues_To_PC_Struct);
+TEST5:=SIZEOF(S_BLVac1Values_To_PC_Struct);
+TEST6:=SIZEOF(S_BLVac2Values_To_PC_Struct);
+TEST7:=SIZEOF(S_BLVac3Values_To_PC_Struct);
+TEST8:=SIZEOF(S_ISPSValues_To_PC_Struct);
+TEST9:=SIZEOF(S_INJLPSValues_To_PC_Struct);
+TEST10:=SIZEOF(S_MainPSValues_To_PC_Struct);
+TEST11:=SIZEOF(S_BLPS1Values_To_PC_Struct);
+TEST12:=SIZEOF(S_BLPS3Values_To_PC_Struct);
+TEST13:=SIZEOF(S_RFValues_To_PC_Struct);
+TEST14:=SIZEOF(S_BDValues_To_PC_Struct);
+TEST15:=SIZEOF(S_ILValues_To_PC_Struct);]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="44" Count="12" />
+      <LineId Id="43" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

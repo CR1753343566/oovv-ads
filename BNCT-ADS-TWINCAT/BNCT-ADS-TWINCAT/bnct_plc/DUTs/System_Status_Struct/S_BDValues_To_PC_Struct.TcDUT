@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_BDValues_To_PC_Struct" Id="{f90533c4-369b-4dd1-9b35-5fd0ac433248}">
+    <Declaration><![CDATA[TYPE S_BDValues_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL  ;// 剥离靶1电机使能指令 
+	PARAM001:BOOL  ;// 剥离靶1电机绝对运动触发指令 
+	PARAM002:REAL  ;// 剥离靶1电机绝对运动位置指令 
+	PARAM003:REAL  ;// 剥离靶1电机绝对运动速度指令 
+	PARAM004:BOOL  ;// 剥离靶1电机复位指令 
+	PARAM005:BOOL  ;// 剥离靶1电机JOG前进指令 
+	PARAM006:BOOL  ;// 剥离靶1电机JOG后退指令 
+	PARAM007:BOOL  ;// 剥离靶1电机急停指令 
+	PARAM008:BOOL  ;// 剥离靶1电机绝对运动完成 
+	PARAM009:BOOL  ;// 剥离靶1电机绝对运动正在进行 
+	PARAM010:REAL  ;// 剥离靶1电机位置状态 
+	PARAM011:REAL  ;// 剥离靶1电机速度状态 
+	PARAM012:BOOL  ;// 剥离靶1电机JOG运动完成 
+	PARAM013:BOOL  ;// 剥离靶1电机JOG运动正在进行 
+	PARAM014:UDINT ;// 剥离靶1电机故障编码 
+	PARAM015:INT   ;// 剥离靶1电位器位置 
+	PARAM016:BOOL  ;// 剥离靶2电机使能指令 
+	PARAM017:BOOL  ;// 剥离靶2电机绝对运动触发指令 
+	PARAM018:REAL  ;// 剥离靶2电机绝对运动位置指令 
+	PARAM019:REAL  ;// 剥离靶2电机绝对运动速度指令 
+	PARAM020:BOOL  ;// 剥离靶2电机复位指令 
+	PARAM021:BOOL  ;// 剥离靶2电机JOG前进指令 
+	PARAM022:BOOL  ;// 剥离靶2电机JOG后退指令 
+	PARAM023:BOOL  ;// 剥离靶2电机急停指令 
+	PARAM024:BOOL  ;// 剥离靶2电机绝对运动完成 
+	PARAM025:BOOL  ;// 剥离靶2电机绝对运动正在进行 
+	PARAM026:REAL  ;// 剥离靶2电机位置 
+	PARAM027:REAL  ;// 剥离靶2电机速度 
+	PARAM028:BOOL  ;// 剥离靶2电机JOG运动完成 
+	PARAM029:BOOL  ;// 剥离靶2电机JOG运动正在进行 
+	PARAM030:UDINT ;// 剥离靶2电机故障编码
+	PARAM031:INT   ;// 剥离靶2电位器位置 
+	PARAM032:REAL  ;// 束流通道1（mA）：注入FC 
+	PARAM033:REAL  ;// 束流通道2（mA）:内靶 
+	PARAM034:REAL  ;// 束流通道3（mA）：剥离靶 
+	PARAM035:REAL  ;// 束流通道4（mA）：引出FC 
+	PARAM036:REAL  ;// 束流通道5（mA）：铍靶 
+	PARAM037:REAL  ;// 束流通道6（uA）：备用1 
+	PARAM038:REAL  ;// 束流通道7（uA）：备用2 
+	PARAM039:REAL  ;// 束流通道8（mA）：备用3 
+	PARAM040:REAL  ;// 束流通道9（uA）：光阑1-上 
+	PARAM041:REAL  ;// 束流通道10（uA）：光阑2-上 
+	PARAM042:REAL  ;// 束流通道11（uA）：光阑1-下 
+	PARAM043:REAL  ;// 束流通道12（uA）：光阑2-下 
+	PARAM044:REAL  ;// 束流通道13（uA）：光阑1-左 
+	PARAM045:REAL  ;// 束流通道14（uA）：光阑2-左 
+	PARAM046:REAL  ;// 束流通道15（uA）：光阑1-右 
+	PARAM047:REAL  ;// 束流通道16（uA）：光阑2-右 
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

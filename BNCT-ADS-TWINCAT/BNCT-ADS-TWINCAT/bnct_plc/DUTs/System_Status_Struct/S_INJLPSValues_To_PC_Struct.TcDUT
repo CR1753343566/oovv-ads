@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_INJLPSValues_To_PC_Struct" Id="{6ea57169-9da6-4edd-94c8-f3b4555cfd91}">
+    <Declaration><![CDATA[TYPE S_INJLPSValues_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ; // 注入线电源系统自动运行，TRUE为开启 
+	PARAM001:REAL ; // XY1-X导向电源电流设置值（A） 
+	PARAM002:BOOL ; // XY1-X导向电源已开 
+	PARAM003:BOOL ; // XY1-X导向电源已关 
+	PARAM004:BOOL ; // XY1-X导向电源正在开 
+	PARAM005:BOOL ; // XY1-X导向电源正在关 
+	PARAM006:REAL ; // XY1-X导向电源运行电流（A） 
+	PARAM007:REAL ; // XY1-X导向电源运行电压（V） 
+	PARAM008:BOOL ; // TRUE时XY1-X导向电源故障 
+	PARAM009:BOOL ; // TRUE时XY1-X导向电源电流操作错误
+	PARAM010:BOOL ; // TRUE时XY1-X导向电源通讯正常 
+	PARAM011:REAL ; // XY1-Y导向电源电流设置值（A） 
+	PARAM012:BOOL ; // XY1-Y导向电源已开 
+	PARAM013:BOOL ; // XY1-Y导向电源已关 
+	PARAM014:BOOL ; // XY1-Y导向电源正在开 
+	PARAM015:BOOL ; // XY1-Y导向电源正在关 
+	PARAM016:REAL ; // XY1-Y导向电源运行电流（A） 
+	PARAM017:REAL ; // XY1-Y导向电源运行电压（V） 
+	PARAM018:BOOL ; // TRUE时XY1-Y导向电源故障 
+	PARAM019:BOOL ; // TRUE时XY1-Y导向电源通讯正常 
+	PARAM020:BOOL ; // TRUE时XY1-Y导向电源电流操作错误 
+	PARAM021:REAL ; // 螺旋管1电源电流设置值（A） 
+	PARAM022:BOOL ; // 螺旋管1电源已开 
+	PARAM023:BOOL ; // 螺旋管1电源已关 
+	PARAM024:BOOL ; // 螺旋管1电源正在开 
+	PARAM025:BOOL ; // 螺旋管1电源正在关 
+	PARAM026:REAL ; // 螺旋管1电源运行电流（A） 
+	PARAM027:REAL ; // 螺旋管1电源运行电压（V） 
+	PARAM028:BOOL ; // TRUE时螺旋管1电源故障 
+	PARAM029:BOOL ; // TRUE时螺旋管1电源电流操作错误 
+	PARAM030:REAL ; // XY2-X导向电源电流设置值（A） 
+	PARAM031:BOOL ; // XY2-X导向电源已开 
+	PARAM032:BOOL ; // XY2-X导向电源已关 
+	PARAM033:BOOL ; // XY2-X导向电源正在开 
+	PARAM034:BOOL ; // XY2-X导向电源正在关 
+	PARAM035:REAL ; // XY2-X导向电源运行电流（A） 
+	PARAM036:REAL ; // XY2-X导向电源运行电压（V） 
+	PARAM037:BOOL ; // TRUE时XY2-X导向电源故障 
+	PARAM038:BOOL ; // TRUE时XY2-X导向电源电流操作错误 
+	PARAM039:BOOL ; // TRUE时XY2-X导向电源通讯正常 
+	PARAM040:REAL ; // XY2-Y导向电源电流设置值（A） 
+	PARAM041:BOOL ; // XY2-Y导向电源已开 
+	PARAM042:BOOL ; // XY2-Y导向电源已关 
+	PARAM043:BOOL ; // XY2-Y导向电源正在开 
+	PARAM044:BOOL ; // XY2-Y导向电源正在关 
+	PARAM045:REAL ; // XY2-Y导向电源运行电流（A） 
+	PARAM046:REAL ; // XY2-Y导向电源运行电压（V） 
+	PARAM047:BOOL ; // TRUE时XY2-Y导向电源故障 
+	PARAM048:BOOL ; // TRUE时XY2-Y导向电源电流操作错误 
+	PARAM049:BOOL ; // TRUE时XY2-Y导向电源通讯正常 
+	PARAM050:REAL ; // 螺旋管2电源电流设置值（A） 
+	PARAM051:BOOL ; // 螺旋管2电源已开 
+	PARAM052:BOOL ; // 螺旋管2电源已关 
+	PARAM053:BOOL ; // 螺旋管2电源正在开 
+	PARAM054:BOOL ; // 螺旋管2电源正在关 
+	PARAM055:REAL ; // 螺旋管2电源运行电流（A） 
+	PARAM056:REAL ; // 螺旋管2电源运行电压（V） 
+	PARAM057:BOOL ; // TRUE时螺旋管2电源故障 
+	PARAM058:BOOL ; // TRUE时螺旋管2电源电流操作错误 
+	PARAM059:BOOL ; // 注入FC抑制偏压电源已开 
+	PARAM060:BOOL ; // 注入FC抑制偏压电源已关 
+	PARAM061:BOOL ; // 注入FC抑制偏压电源正在开 
+	PARAM062:BOOL ; // 注入FC抑制偏压电源正在关 
+	PARAM063:REAL ; // 注入FC抑制偏压电源运行电流（A） 
+	PARAM064:REAL ; // 注入FC抑制偏压电源运行电压（V） 
+	PARAM065:BOOL ; // Ture为注入FC抑制偏压电源故障 
+	PARAM066:BOOL ; // Ture为注入FC抑制偏压电源远控 
+	PARAM067:BOOL ; // 注入FC抑制偏压电源正极 
+	PARAM068:BOOL ; // 注入FC抑制偏压电源负极 
+	PARAM069:BOOL ; // 注入FC抑制偏压电源电压操作错误 
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

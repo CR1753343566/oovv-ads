@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_RFValues_To_PC_Struct" Id="{9bd6fd8c-d478-45fc-a433-0d3c629893a8}">
+    <Declaration><![CDATA[TYPE S_RFValues_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ;// 高频发射机1已上电 
+	PARAM001:BOOL ;// 高频发射机1已停电 
+	PARAM002:BOOL ;// 高频发射机1正在上电 
+	PARAM003:BOOL ;// 高频发射机1正在停电 
+	PARAM004:BOOL ;// 高频发射机1高压已上电 
+	PARAM005:BOOL ;// 高频发射机1高压已停电 
+	PARAM006:BOOL ;// 高频发射机1高压正在上电 
+	PARAM007:BOOL ;// 高频发射机1高压正在停电 
+	PARAM008:BOOL ;// 高频发射机1风冷状态 
+	PARAM009:BOOL ;// 高频发射机1水冷状态 
+	PARAM010:BOOL ;// 高频发射机1主变压器温度 
+	PARAM011:BOOL ;// 高频发射机1门开关 
+	PARAM012:BOOL ;// 高频发射机1冷却加电完成 
+	PARAM013:BOOL ;// 高频发射机1灯丝加电完成 
+	PARAM014:BOOL ;// 高频发射机1固态加电完成 
+	PARAM015:BOOL ;// 高频发射机1高压加电完成 
+	PARAM016:BOOL ;// 高频发射机1风冷状态锁存 
+	PARAM017:BOOL ;// 高频发射机1水冷状态锁存 
+	PARAM018:BOOL ;// 高频发射机1主变压器温度锁存 
+	PARAM019:BOOL ;// 高频发射机1门开关锁存 
+	PARAM020:BOOL ;// 高频发射机1外部连锁锁存 
+	PARAM021:BOOL ;// 高频发射机1阳极过流锁存 
+	PARAM022:BOOL ;// 高频发射机1反射过大锁存 
+	PARAM023:BOOL ;// 高频发射机1冷却汇总锁存 
+	PARAM024:BOOL ;// 高频发射机1闭锁汇总锁存 
+	PARAM025:BOOL ;// 高频发射机1过荷汇总锁存 
+	PARAM026:BOOL ;// 高频发射机1冷却汇总 
+	PARAM027:BOOL ;// 高频发射机1闭锁汇总 
+	PARAM028:BOOL ;// 高频发射机1过荷汇总 
+	PARAM029:REAL ;// 高频发射机1灯丝电流 
+	PARAM030:REAL ;// 高频发射机1栅极电流 
+	PARAM031:REAL ;// 高频发射机1阳极电压 
+	PARAM032:REAL ;// 高频发射机1阳极电流 
+	PARAM033:REAL ;// 高频发射机1入射功率 
+	PARAM034:REAL ;// 高频发射机1反射功率 
+	PARAM035:BOOL ;// 高频发射机2已上电 
+	PARAM036:BOOL ;// 高频发射机2已停电 
+	PARAM037:BOOL ;// 高频发射机2正在上电 
+	PARAM038:BOOL ;// 高频发射机2正在停电 
+	PARAM039:BOOL ;// 高频发射机2高压已上电 
+	PARAM040:BOOL ;// 高频发射机2高压已停电 
+	PARAM041:BOOL ;// 高频发射机2高压正在上电 
+	PARAM042:BOOL ;// 高频发射机2高压正在停电 
+	PARAM043:BOOL ;// 高频发射机2风冷状态 
+	PARAM044:BOOL ;// 高频发射机2水冷状态 
+	PARAM045:BOOL ;// 高频发射机2主变压器温度 
+	PARAM046:BOOL ;// 高频发射机2门开关 
+	PARAM047:BOOL ;// 高频发射机2冷却加电完成 
+	PARAM048:BOOL ;// 高频发射机2灯丝加电完成 
+	PARAM049:BOOL ;// 高频发射机2固态加电完成 
+	PARAM050:BOOL ;// 高频发射机2高压加电完成
+	PARAM051:BOOL ;// 高频发射机2风冷状态锁存 
+	PARAM052:BOOL ;// 高频发射机2水冷状态锁存 
+	PARAM053:BOOL ;// 高频发射机2主变压器温度锁存 
+	PARAM054:BOOL ;// 高频发射机2门开关锁存 
+	PARAM055:BOOL ;// 高频发射机2外部连锁锁存 
+	PARAM056:BOOL ;// 高频发射机2阳极过流锁存 
+	PARAM057:BOOL ;// 高频发射机2反射过大锁存 
+	PARAM058:BOOL ;// 高频发射机2冷却汇总锁存 
+	PARAM059:BOOL ;// 高频发射机2闭锁汇总锁存 
+	PARAM060:BOOL ;// 高频发射机2过荷汇总锁存 
+	PARAM061:BOOL ;// 高频发射机2冷却汇总 
+	PARAM062:BOOL ;// 高频发射机2闭锁汇总 
+	PARAM063:BOOL ;// 高频发射机2过荷汇总 
+	PARAM064:REAL ;// 高频发射机2灯丝电流 
+	PARAM065:REAL ;// 高频发射机2栅极电流 
+	PARAM066:REAL ;// 高频发射机2阳极电压 
+	PARAM067:REAL ;// 高频发射机2阳极电流 
+	PARAM068:REAL ;// 高频发射机2入射功率 
+	PARAM069:REAL ;// 高频发射机2反射功率 
+	
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_BLPS3Values_To_PC_Struct" Id="{e6dfd3e0-4093-4675-bfad-586d8ec0d2f3}">
+    <Declaration><![CDATA[TYPE S_BLPS3Values_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ;// 束流线3电源自动运行，TRUE为开启 
+	PARAM001:REAL ;// 四级透镜4电源电流设置值（A） 
+	PARAM002:BOOL ;// 四级透镜4电源已开 
+	PARAM003:BOOL ;// 四级透镜4电源已关 
+	PARAM004:BOOL ;// 四级透镜4电源正在开 
+	PARAM005:BOOL ;// 四级透镜4电源正在关 
+	PARAM006:REAL ;// 四级透镜4电源运行电流（A） 
+	PARAM007:REAL ;// 四级透镜4电源运行电压（V） 
+	PARAM008:BOOL ;// TRUE时四级透镜4电源故障 
+	PARAM009:BOOL ;// 四级透镜4电源电流操作故障 
+	PARAM010:REAL ;// 四八级3-1电源电流设置值（A） 
+	PARAM011:BOOL ;// 四八级3-1电源已开
+	PARAM012:BOOL ;// 四八级3-1电源已关 
+	PARAM013:BOOL ;// 四八级3-1电源正在开 
+	PARAM014:BOOL ;// 四八级3-1电源正在关 
+	PARAM015:REAL ;// 四八级3-1电源运行电流（A） 
+	PARAM016:REAL ;// 四八级3-1电源运行电压（V） 
+	PARAM017:BOOL ;// TRUE时四八级3-1电源故障 
+	PARAM018:BOOL ;// 四八级3-1电源电流操作错误 
+	PARAM019:REAL ;// 四八级3-2电源电流设置值（A） 
+	PARAM020:BOOL ;// 四八级3-2电源已开 
+	PARAM021:BOOL ;// 四八级3-2电源已关 
+	PARAM022:BOOL ;// 四八级3-2电源正在开 
+	PARAM023:BOOL ;// 四八级3-2电源正在关 
+	PARAM024:REAL ;// 四八级3-2电源运行电流（A） 
+	PARAM025:REAL ;// 四八级3-2电源运行电压（V） 
+	PARAM026:BOOL ;// TRUE时四八级3-2电源故障 
+	PARAM027:BOOL ;// 四八级3-2电源电流操作错误 
+	PARAM028:BOOL ;// 双丝抑制偏压电源已开 
+	PARAM029:BOOL ;// 双丝抑制偏压电源已关 
+	PARAM030:BOOL ;// 双丝抑制偏压电源正在开 
+	PARAM031:BOOL ;// 双丝抑制偏压电源正在关 
+	PARAM032:REAL ;// 双丝抑制偏压电源运行电流（A） 
+	PARAM033:REAL ;// 双丝抑制偏压电源运行电压（V） 
+	PARAM034:BOOL ;// Ture为双丝抑制偏压电源故障 
+	PARAM035:BOOL ;// Ture为双丝抑制偏压电源远控 
+	PARAM036:BOOL ;// 双丝抑制偏压电源正极 
+	PARAM037:BOOL ;// 双丝抑制偏压电源负极 
+	PARAM038:BOOL ;// 双丝抑制偏压电源电压操作错误 
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

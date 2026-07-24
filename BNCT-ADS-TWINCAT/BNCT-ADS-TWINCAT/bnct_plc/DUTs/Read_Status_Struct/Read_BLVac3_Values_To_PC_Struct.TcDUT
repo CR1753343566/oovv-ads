@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Read_BLVac3_Values_To_PC_Struct" Id="{0b1e0546-2e91-4e5d-a52d-4d3881eabd54}">
+    <Declaration><![CDATA[TYPE Read_BLVac3_Values_To_PC_Struct :
+UNION
+	S_BLVac3Values_To_PC:S_BLVac3Values_To_PC_Struct;
+END_UNION
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

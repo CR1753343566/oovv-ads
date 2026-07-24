@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_MainVacValues_To_PC_Struct" Id="{b700fc79-0dc1-4a20-bf98-89be1291c06e}">
+    <Declaration><![CDATA[TYPE S_MainVacValues_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ; // 主真空低真空自动运行，True代表开 
+	PARAM001:BOOL ; // 主真空高真空自动运行，True代表开 
+	PARAM002:BOOL ; // 冷泵隔断阀1开到位 
+	PARAM003:BOOL ; // 冷泵隔断阀1关到位 
+	PARAM004:BOOL ; // 冷泵隔断阀1正在开 
+	PARAM005:BOOL ; // 冷泵隔断阀1正在关 
+	PARAM006:BOOL ; // 冷泵隔断阀1开启操作错误 
+	PARAM007:BOOL ; // 冷泵隔断阀1关闭操作错误 
+	PARAM008:BOOL ; // 冷泵隔断阀2开到位 
+	PARAM009:BOOL ; // 冷泵隔断阀2关到位 
+	PARAM010:BOOL ; // 冷泵隔断阀2正在开 
+	PARAM011:BOOL ; // 冷泵隔断阀2正在关 
+	PARAM012:BOOL ; // 冷泵隔断阀2开启操作错误 
+	PARAM013:BOOL ; // 冷泵隔断阀2关闭操作错误 
+	PARAM014:BOOL ; // 角阀1开到位 
+	PARAM015:BOOL ; // 角阀1关到位 
+	PARAM016:BOOL ; // 角阀1正在开 
+	PARAM017:BOOL ; // 角阀1正在关 
+	PARAM018:BOOL ; // 角阀1开启操作错误 
+	PARAM019:BOOL ; // 角阀1关闭操作错误 
+	PARAM020:BOOL ; // 主真空放气阀开到位 
+	PARAM021:BOOL ; // 主真空放气阀关到位 
+	PARAM022:BOOL ; // 主真空放气阀正在开 
+	PARAM023:BOOL ; // 主真空放气阀正在关 
+	PARAM024:BOOL ; // 主真空放气阀开启操作错误 
+	PARAM025:BOOL ; // 主真空放气阀关闭操作错误
+	PARAM026:BOOL ; // 主真空干泵开到位 
+	PARAM027:BOOL ; // 主真空干泵关到位 
+	PARAM028:BOOL ; // 主真空干泵正在开 
+	PARAM029:BOOL ; // 主真空干泵正在关 
+	PARAM030:BOOL ; // 主真空干泵开启操作错误 
+	PARAM031:BOOL ; // 主真空干泵关闭操作错误 
+	PARAM032:BOOL ; // 主真空分子泵V2达到频率值 
+	PARAM033:BOOL ; // 主真空分子泵V2频率下降到0 
+	PARAM034:BOOL ; // 主真空分子泵V2故障 
+	PARAM035:BOOL ; // 主真空分子泵V2频率上升中 
+	PARAM036:BOOL ; // 主真空分子泵V2频率下降中 
+	PARAM037:BOOL ; // 主真空分子泵V2开启操作错误 
+	PARAM038:BOOL ; // 主真空分子泵V2关闭操作错误 
+	PARAM039:REAL ; // 主真空分子泵V2输出频率（Hz） 
+	PARAM040:BOOL ; // 冷泵1前级阀开到位 
+	PARAM041:BOOL ; // 冷泵1前级阀关到位 
+	PARAM042:BOOL ; // 冷泵1前级阀正在开 
+	PARAM043:BOOL ; // 冷泵1前级阀正在关 
+	PARAM044:BOOL ; // 冷泵1前级阀通讯状态 
+	PARAM045:BOOL ; // 冷泵1前级阀开启操作错误 
+	PARAM046:BOOL ; // 冷泵1前级阀关闭操作错误 
+	PARAM047:BOOL ; // 冷泵1开到位 
+	PARAM048:BOOL ; // 冷泵1关到位 
+	PARAM049:BOOL ; // 冷泵1正在开 
+	PARAM050:BOOL ; // 冷泵1正在关 
+	PARAM051:BOOL ; // 冷泵1通讯状态 
+	PARAM052:REAL ; // 冷泵1一级冷板温度 
+	PARAM053:REAL ; // 冷泵1二级冷板温度
+	PARAM054:REAL ; // 冷泵1真空度 
+	PARAM055:BOOL ; // 冷泵1开启操作错误 
+	PARAM056:BOOL ; // 冷泵1关闭操作错误 
+	PARAM057:BOOL ; // 冷泵2前级阀开到位 
+	PARAM058:BOOL ; // 冷泵2前级阀关到位 
+	PARAM059:BOOL ; // 冷泵2前级阀正在开 
+	PARAM060:BOOL ; // 冷泵2前级阀正在关 
+	PARAM061:BOOL ; // 冷泵2前级阀通讯状态 
+	PARAM062:BOOL ; // 冷泵2前级阀开启操作错误 
+	PARAM063:BOOL ; // 冷泵2前级阀关闭操作错误 
+	PARAM064:BOOL ; // 冷泵2开到位 
+	PARAM065:BOOL ; // 冷泵2关到位 
+	PARAM066:BOOL ; // 冷泵2正在开 
+	PARAM067:BOOL ; // 冷泵2正在关 
+	PARAM068:BOOL ; // 冷泵2通讯状态 
+	PARAM069:REAL ; // 冷泵2一级冷板温度 
+	PARAM070:REAL ; // 冷泵2二级冷板温度 
+	PARAM071:REAL ; // 冷泵2真空度 
+	PARAM072:BOOL ; // 冷泵2开启操作错误 
+	PARAM073:BOOL ; // 冷泵2关闭操作错误 
+	PARAM074:LREAL ; //  主真空低真空度（mBar） 
+	PARAM075:LREAL ; //  主真空高真空度（mBar） 
+	PARAM076:BOOL ; // 主真空低真空达标 
+	PARAM077:BOOL ; // 主真空高真空达标
+	
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

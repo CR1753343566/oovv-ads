@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <Task Name="PlcTask" Id="{38884377-f759-4a70-a296-299f60d348ac}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>10000</CycleTime>
+    <Priority>20</Priority>
+    <PouCall>
+      <Name>MAIN</Name>
+    </PouCall>
+    <PouCall>
+      <Name>Call_Values_To_PC</Name>
+    </PouCall>
+    <PouCall>
+      <Name>Com_StripperEleMach</Name>
+    </PouCall>
+    <PouCall>
+      <Name>GVL_TCSSys</Name>
+    </PouCall>
+    <TaskFBGuid>{e2dfc4bb-db05-45a8-a372-7345856399f9}</TaskFBGuid>
+    <Fb_init>{58815ec9-fcd4-4662-a562-0f5d35e61476}</Fb_init>
+    <Fb_exit>{2cc49593-e41f-4ac0-a5c4-7e280b0c159c}</Fb_exit>
+    <CycleUpdate>{339de84d-f46b-42f8-bb7c-5e72dfe41d68}</CycleUpdate>
+    <PostCycleUpdate>{cf8859a3-2dc3-4953-adc8-be9f75f17d24}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

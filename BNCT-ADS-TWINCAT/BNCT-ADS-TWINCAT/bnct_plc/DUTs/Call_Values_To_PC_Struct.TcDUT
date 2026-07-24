@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Call_Values_To_PC_Struct" Id="{25c04cf9-212b-4ee9-a27e-3b445dbcfc03}">
+    <Declaration><![CDATA[TYPE Call_Values_To_PC_Struct :
+UNION
+	Read_WC_Values_To_PC:READ_WC_Values_To_PC_Struct; //3.4.1水冷系统
+	Read_AR_Values_To_PC:Read_AR_Values_To_PC_Struct; //3.4.2气动系统
+	Read_ISVac_Values_To_PC:Read_ISVac_Values_To_PC_Struct; //3.4.3离子源真空系统
+	Read_MainVac_Values_To_PC:Read_MainVac_Values_To_PC_Struct; //3.4.4主真空系统
+	Read_BLVac1_Values_To_PC:Read_BLVac1_Values_To_PC_Struct; //3.4.5 束流线 1（公共束流线）真空系统
+	Read_BLVac2_Values_To_PC:Read_BLVac2_Values_To_PC_Struct; //3.4.6 束流线 2（公共束流线）真空系统
+	Read_BLVac3_Values_To_PC:Read_BLVac3_Values_To_PC_Struct; //3.4.7 束流线 3（公共束流线）真空系统
+	Read_ISPS_Values_To_PC:Read_ISPS_Values_To_PC_Struct; //3.4.8 离子源电源系统 
+	Read_INJLPS_Values_To_PC:Read_INJLPS_Values_To_PC_Struct; //3.4.9 注入线电源系统
+	Read_MainPS_Values_To_PC:Read_MainPS_Values_To_PC_Struct;  //3.4.10 主器电源系统
+	Read_BLPS1_Values_To_PC:Read_BLPS1_Values_To_PC_Struct; //3.4.11 束流线 1（公共束流线）电源系统
+	Read_BLPS3_Values_To_PC:Read_BLPS3_Values_To_PC_Struct; //3.4.12 束流线 3（中子靶束流线）电源系统
+	Read_RFG_Values_To_PC:Read_RFG_Values_To_PC_Struct; //3.4.13 高频系统
+	Read_BD_Values_To_PC:Read_BD_Values_To_PC_Struct; //3.4.14 束流测量系统
+	Read_IL_Values_To_PC:Read_IL_Values_To_PC_Struct; //3.4.15 联锁系统
+END_UNION
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

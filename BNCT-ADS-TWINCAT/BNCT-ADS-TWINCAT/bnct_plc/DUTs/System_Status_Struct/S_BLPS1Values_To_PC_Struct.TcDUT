@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_BLPS1Values_To_PC_Struct" Id="{3f65b9a5-eec6-4ece-b84a-ec25e1721dc9}">
+    <Declaration><![CDATA[TYPE S_BLPS1Values_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ; //  束流线1电源自动运行，TRUE为开启 
+	PARAM001:REAL ; //  四级透镜1电源电流设置值（A） 
+	PARAM002:BOOL ; //  四级透镜1电源已开 
+	PARAM003:BOOL ; //  四级透镜1电源已关 
+	PARAM004:BOOL ; //  四级透镜1电源正在开 
+	PARAM005:BOOL ; //  四级透镜1电源正在关 
+	PARAM006:REAL ; //  四级透镜1电源运行电流（A） 
+	PARAM007:REAL ; //  四级透镜1电源运行电压（V） 
+	PARAM008:BOOL ; //  TRUE时四级透镜1电源故障 
+	PARAM009:BOOL ; //  TRUE时四级透镜1电源电流操作错误 
+	PARAM010:REAL ; //  XY1-X导向电源电流设置值（A） 
+	PARAM011:BOOL ; //  XY1-X导向电源已开 
+	PARAM012:BOOL ; //  XY1-X导向电源已关 
+	PARAM013:BOOL ; //  XY1-X导向电源正在开 
+	PARAM014:BOOL ; //  XY1-X导向电源正在关 
+	PARAM015:REAL ; //  XY1-X导向电源运行电流（A） 
+	PARAM016:REAL ; //  XY1-X导向电源运行电压（V） 
+	PARAM017:BOOL ; //  TRUE时XY1-X导向电源故障 
+	PARAM018:BOOL ; //  TRUE时XY1-X电源电流操作错误 
+	PARAM019:BOOL ; //  TRUE时XY1-X导向电源通讯正常 
+	PARAM020:REAL ; //  XY1-Y导向电源电流设置值（A） 
+	PARAM021:BOOL ; //  XY1-Y导向电源已开 
+	PARAM022:BOOL ; //  XY1-Y导向电源已关 
+	PARAM023:BOOL ; //  XY1-Y导向电源正在开 
+	PARAM024:BOOL ; //  XY1-Y导向电源正在关 
+	PARAM025:REAL ; //  XY1-Y导向电源运行电流（A） 
+	PARAM026:REAL ; //  XY1-Y导向电源运行电压（V） 
+	PARAM027:BOOL ; //  TRUE时XY1-Y导向电源故障 
+	PARAM028:BOOL ; //  TRUE时XY1-Y电源电流操作错误 
+	PARAM029:BOOL ; //  TRUE时XY1-Y导向电源通讯正常 
+	PARAM030:REAL ; //  四极透镜2电源电流设置值（A） 
+	PARAM031:BOOL ; //  四极透镜2电源已开 
+	PARAM032:BOOL ; //  四极透镜2电源已关 
+	PARAM033:BOOL ; //  四极透镜2电源正在开 
+	PARAM034:BOOL ; //  四极透镜2电源正在关 
+	PARAM035:REAL ; //  四极透镜2电源运行电流（A） 
+	PARAM036:REAL ; //  四极透镜2电源运行电压（V） 
+	PARAM037:BOOL ; //  TRUE时四极透镜2电源故障
+	PARAM038:BOOL ; //  TRUE时四极透镜2电源电流操作错误 
+	PARAM039:REAL ; //  四极透镜3电源电流设置值（A） 
+	PARAM040:BOOL ; //  四极透镜3电源已开 
+	PARAM041:BOOL ; //  四极透镜3电源已关 
+	PARAM042:BOOL ; //  四极透镜3电源正在开 
+	PARAM043:BOOL ; //  四极透镜3电源正在关 
+	PARAM044:REAL ; //  四极透镜3电源运行电流（A） 
+	PARAM045:REAL ; //  四极透镜3电源运行电压（V） 
+	PARAM046:BOOL ; //  TRUE时四极透镜3电源故障 
+	PARAM047:BOOL ; //  TRUE时四极透镜3电源电流操作错误 
+	PARAM048:REAL ; //  偏转磁铁电源电流设置值（A） 
+	PARAM049:BOOL ; //  偏转磁铁电源已开 
+	PARAM050:BOOL ; //  偏转磁铁电源已关 
+	PARAM051:BOOL ; //  偏转磁铁电源正在开 
+	PARAM052:BOOL ; //  偏转磁铁电源正在关 
+	PARAM053:REAL ; //  偏转磁铁电源运行电流（A） 
+	PARAM054:REAL ; //  偏转磁铁电源运行电压（V） 
+	PARAM055:BOOL ; //  TRUE时偏转磁铁电源故障 
+	PARAM056:BOOL ; //  TRUE时偏转磁铁电源电流操作错误 
+	PARAM057:REAL ; //  四八级1-1电源电流设置值（A） 
+	PARAM058:BOOL ; //  四八级1-1电源已开 
+	PARAM059:BOOL ; //  四八级1-1电源已关 
+	PARAM060:BOOL ; //  四八级1-1电源正在开 
+	PARAM061:BOOL ; //  四八级1-1电源正在关 
+	PARAM062:REAL ; //  四八级1-1电源运行电流（A） 
+	PARAM063:REAL ; //  四八级1-1电源运行电压（V） 
+	PARAM064:BOOL ; //  TRUE时四八级1-1电源故障 
+	PARAM065:BOOL ; //  TRUE时四八级1-1电源电流操作错误
+	PARAM066:REAL ; //  四八级1-2电源电流设置值（A） 
+	PARAM067:BOOL ; //  四八级1-2电源已开 
+	PARAM068:BOOL ; //  四八级1-2电源已关 
+	PARAM069:BOOL ; //  四八级1-2电源正在开 
+	PARAM070:BOOL ; //  四八级1-2电源正在关 
+	PARAM071:REAL ; //  四八级1-2电源运行电流（A） 
+	PARAM072:REAL ; //  四八级1-2电源运行电压（V） 
+	PARAM073:BOOL ; //  TRUE时四八级1-2电源故障 
+	PARAM074:BOOL ; //  TRUE时四八级1-2电源电流操作错误 
+	PARAM075:REAL ; //  四八级2-1电源电流设置值（A） 
+	PARAM076:BOOL ; //  四八级2-1电源已开 
+	PARAM077:BOOL ; //  四八级2-1电源已关 
+	PARAM078:BOOL ; //  四八级2-1电源正在开 
+	PARAM079:BOOL ; //  四八级2-1电源正在关 
+	PARAM080:REAL ; //  四八级2-1电源运行电流（A） 
+	PARAM081:REAL ; //  四八级2-1电源运行电压（V） 
+	PARAM082:BOOL ; //  TRUE时四八级2-1电源故障 
+	PARAM083:BOOL ; //  TRUE时四八级2-1电源电流操作错误 
+	PARAM084:REAL ; //  四八级2-2电源电流设置值（A） 
+	PARAM085:BOOL ; //  四八级2-2电源已开 
+	PARAM086:BOOL ; //  四八级2-2电源已关 
+	PARAM087:BOOL ; //  四八级2-2电源正在开 
+	PARAM088:BOOL ; //  四八级2-2电源正在关 
+	PARAM089:REAL ; //  四八级2-2电源运行电流（A） 
+	PARAM090:REAL ; //  四八级2-2电源运行电压（V） 
+	PARAM091:BOOL ; //  TRUE时四八级2-2电源故障 
+	PARAM092:BOOL ; //  TRUE时四八级2-2电源电流操作错误 
+	PARAM093:BOOL ; //  引出FC抑制偏压电源已开 
+	PARAM094:BOOL ; //  引出FC抑制偏压电源已关 
+	PARAM095:BOOL ; //  引出FC抑制偏压电源正在开 
+	PARAM096:BOOL ; //  引出FC抑制偏压电源正在关 
+	PARAM097:REAL ; //  引出FC抑制偏压电源运行电流（A） 
+	PARAM098:REAL ; //  引出FC抑制偏压电源运行电压（V） 
+	PARAM099:BOOL ; //  Ture为引出FC抑制偏压电源故障 
+	PARAM100:BOOL ; //  Ture为引出FC抑制偏压电源远控 
+	PARAM101:BOOL ; //  引出FC抑制偏压电源正极 
+	PARAM102:BOOL ; //  引出FC抑制偏压电源负极 
+	PARAM103:BOOL ; //  引出FC抑制偏压电源电压操作错误 
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

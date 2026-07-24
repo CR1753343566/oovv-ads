@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Read_IL_Values_To_PC_Struct" Id="{0a9c52e7-47c0-4c42-a97d-2b297c2e72a7}">
+    <Declaration><![CDATA[TYPE Read_IL_Values_To_PC_Struct :
+UNION
+	S_ILValues_To_PC:S_ILValues_To_PC_Struct;
+	// S_ILValues_To_PC:ARRAY[0..116]OF BYTE;
+END_UNION
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

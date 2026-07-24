@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Read_ISVac_Values_To_PC_Struct" Id="{4372f024-21f4-4a52-98fa-3fb15bb3e00e}">
+    <Declaration><![CDATA[TYPE Read_ISVac_Values_To_PC_Struct :
+UNION
+	S_ISVacValues_To_PC:S_ISVacValues_To_PC_Struct;
+END_UNION
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

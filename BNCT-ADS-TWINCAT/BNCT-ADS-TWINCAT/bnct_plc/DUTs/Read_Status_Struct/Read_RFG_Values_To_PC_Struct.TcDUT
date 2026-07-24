@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Read_RFG_Values_To_PC_Struct" Id="{fe0166be-e974-4b8b-88f8-f81e347c5fb6}">
+    <Declaration><![CDATA[TYPE Read_RFG_Values_To_PC_Struct :
+UNION
+	S_RFValues_To_PC:S_RFValues_To_PC_Struct;
+END_UNION
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

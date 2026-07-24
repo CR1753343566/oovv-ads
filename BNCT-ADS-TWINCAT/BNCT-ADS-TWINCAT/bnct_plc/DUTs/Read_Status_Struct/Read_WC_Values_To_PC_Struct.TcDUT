@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Read_WC_Values_To_PC_Struct" Id="{0d3cbd01-f002-45b5-8a80-0e4a28c48a3e}">
+    <Declaration><![CDATA[TYPE Read_WC_Values_To_PC_Struct :
+UNION
+	S_WCValues_To_PC:S_WCValues_To_PC_Struct;
+END_UNION
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

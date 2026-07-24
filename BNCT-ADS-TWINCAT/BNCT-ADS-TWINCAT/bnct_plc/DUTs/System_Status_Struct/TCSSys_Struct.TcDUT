@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="TCSSys_Struct" Id="{a5c49622-001c-429c-9f35-828403bbba15}">
+    <Declaration><![CDATA[TYPE TCSSys_Struct :
+STRUCT
+	PARAM000:BOOL ;// 只读，TRUE为加速器准备好
+	PARAM001:BOOL ;// 读写，TRUE为TCS准备好  
+	PARAM002:BOOL ;// 只读，TRUE代表加速器出束 
+	PARAM003:BOOL ;// 读写，TRUE为TCS系统正在运行  
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

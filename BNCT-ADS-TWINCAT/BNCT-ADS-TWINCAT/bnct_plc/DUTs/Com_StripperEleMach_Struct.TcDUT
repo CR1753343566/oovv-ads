@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Com_StripperEleMach_Struct" Id="{daed7965-a4f6-42e8-9f05-0e0c514a1dbe}">
+    <Declaration><![CDATA[TYPE Com_StripperEleMach_Struct :
+STRUCT
+	Axis1_bEleMachinery_C_Power        : BOOL;
+    Axis1_bEleMachinery_C_JF           : BOOL;
+    Axis1_bEleMachinery_C_JB           : BOOL;
+	Axis1_fEleMachinery_C_AbPos        : REAL;
+    Axis1_fEleMachinery_C_AbPosVelo    : REAL;
+    Axis1_bEleMachinery_C_AbPosExecute : BOOL;
+    Axis1_bEleMachinery_C_Reset        : BOOL;
+	Axis2_bEleMachinery_C_Power        : BOOL;
+    Axis2_bEleMachinery_C_JF           : BOOL;
+    Axis2_bEleMachinery_C_JB           : BOOL;
+	Axis2_fEleMachinery_C_AbPos        : REAL;
+    Axis2_fEleMachinery_C_AbPosVelo    : REAL;
+    Axis2_bEleMachinery_C_AbPosExecute : BOOL;
+    Axis2_bEleMachinery_C_Reset        : BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

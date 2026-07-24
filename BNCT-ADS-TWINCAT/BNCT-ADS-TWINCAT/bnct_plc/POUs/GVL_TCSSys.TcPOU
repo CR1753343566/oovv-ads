@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="GVL_TCSSys" Id="{503d0e44-2c3f-4478-88e3-f9e38ef73cef}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM GVL_TCSSys
+VAR
+	TCSSys:TCSSys_Struct; //3.4.16 TCS系统
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="GVL_TCSSys">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

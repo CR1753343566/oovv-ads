@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="Read_INJLPS_Values_To_PC_Struct" Id="{94145265-0621-4840-a36d-7bc2a30f5281}">
+    <Declaration><![CDATA[TYPE Read_INJLPS_Values_To_PC_Struct :
+UNION
+	S_INJLPSValues_To_PC:S_INJLPSValues_To_PC_Struct;
+END_UNION
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

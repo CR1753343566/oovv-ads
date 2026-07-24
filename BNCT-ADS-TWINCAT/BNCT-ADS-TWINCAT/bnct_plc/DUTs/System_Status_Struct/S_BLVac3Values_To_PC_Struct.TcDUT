@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_BLVac3Values_To_PC_Struct" Id="{39c9790b-d1b9-4ba9-8407-6a9d680fa26c}">
+    <Declaration><![CDATA[TYPE S_BLVac3Values_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ; // 束流线3低真空自动运行，True代表开 
+	PARAM001:BOOL ; // 束流线3高真空自动运行，True代表开 
+	PARAM002:BOOL ; // 束流线角阀3开到位 
+	PARAM003:BOOL ; // 束流线角阀3关到位 
+	PARAM004:BOOL ; // 束流线角阀3正在开 
+	PARAM005:BOOL ; // 束流线角阀3正在关
+	PARAM006:BOOL ; // 束流线角阀3开启操作错误 
+	PARAM007:BOOL ; // 束流线角阀3关闭操作错误 
+	PARAM008:BOOL ; // 束流线放气阀3开到位 
+	PARAM009:BOOL ; // 束流线放气阀3关到位 
+	PARAM010:BOOL ; // 束流线放气阀3正在开 
+	PARAM011:BOOL ; // 束流线放气阀3正在关 
+	PARAM012:BOOL ; // 束流线放气阀3开启操作错误 
+	PARAM013:BOOL ; // 束流线放气阀2关闭操作错误 
+	PARAM014:BOOL ; // 束流线3机械泵开到位 
+	PARAM015:BOOL ; // 束流线3机械泵关到位 
+	PARAM016:BOOL ; // 束流线3机械泵正在开 
+	PARAM017:BOOL ; // 束流线3机械泵正在关 
+	PARAM018:BOOL ; // 束流线3机械泵开启操作错误 
+	PARAM019:BOOL ; // 束流线3机械泵关闭操作错误 
+	PARAM020:BOOL ; // 束流线3分子泵V7达到频率值 
+	PARAM021:BOOL ; // 束流线3分子泵V7频率下降到0 
+	PARAM022:BOOL ; // 束流线3分子泵V7故障 
+	PARAM023:BOOL ; // 束流线3分子泵V7频率上升中 
+	PARAM024:BOOL ; // 束流线3分子泵V7频率下降中 
+	PARAM025:BOOL ; // 束流线3分子泵V7开启操作错误 
+	PARAM026:BOOL ; // 束流线3分子泵V7关闭操作错误 
+	PARAM027:REAL ; // 束流线3分子泵V7输出频率（Hz） 
+	PARAM028:LREAL ; // 束流线3低真空度（mbar） 
+	PARAM029:LREAL ; // 束流线3高真空度（mbar） 
+	PARAM030:BOOL ; // 束流线3低真空已达标 
+	PARAM031:BOOL ; // 束流线3高真空已达标 
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

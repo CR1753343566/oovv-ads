@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_WCValues_To_PC_Struct" Id="{93994ebf-f596-4877-8f9d-81d2f519b175}">
+    <Declaration><![CDATA[TYPE S_WCValues_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL ; // 主器水流继电器 01 高频上 1#
+	PARAM001:BOOL ; // 主器水流继电器 02 高频上 2#
+	PARAM002:BOOL ; // 主器水流继电器 03 高频下 1#
+	PARAM003:BOOL ; // 主器水流继电器 04 高频下 2#
+	PARAM004:BOOL ; // 主器水流继电器 05 上线圈
+	PARAM005:BOOL ; // 主器水流继电器 06 下线圈
+	PARAM006:BOOL ; // 主器水流继电器 07 聚束器分路
+	PARAM007:BOOL ; // 主器水流继电器 08 离子源
+	PARAM008:BOOL ; // 主器水流继电器 09 内靶
+	PARAM009:BOOL ; // 主器水流继电器 10 螺旋管
+	PARAM010:BOOL ; // 主器水流继电器 11 冷泵
+	PARAM011:BOOL ; // 主器水流继电器 12 主真空
+	PARAM012:BOOL ; // 主器水流继电器 13 离子源分支
+	PARAM013:BOOL ; // 主器水流继电器 14 备用
+	PARAM014:BOOL ; // 束流线水流继电器 01
+	PARAM015:BOOL ; // 束流线水流继电器 02
+	PARAM016:BOOL ; // 束流线水流继电器 03
+	PARAM017:BOOL ; // 束流线水流继电器 04
+	PARAM018:BOOL ; // 束流线水流继电器 05
+	PARAM019:BOOL ; // 束流线水流继电器 06
+	PARAM020:BOOL ; // 束流线水流继电器 07
+	PARAM021:BOOL ; // 束流线水流继电器 08
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

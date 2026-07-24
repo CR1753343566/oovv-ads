@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <DUT Name="S_ISPSValues_To_PC_Struct" Id="{5ec8b886-98a8-4795-9dd3-cbd9d339d051}">
+    <Declaration><![CDATA[TYPE S_ISPSValues_To_PC_Struct :
+STRUCT
+	PARAM000:BOOL  ; // 离子源电源系统自动运行，TRUE为开启 
+	PARAM001:REAL  ; // 离子源高压电源电流设置值（mA） 
+	PARAM002:REAL  ; // 离子源高压电源电压设置值（kV） 
+	PARAM003:BOOL  ; // 离子源高压电源开到位 
+	PARAM004:BOOL  ; // 离子源高压电源关到位 
+	PARAM005:BOOL  ; // 离子源高压电源正在开 
+	PARAM006:BOOL  ; // 离子源高压电源正在关 
+	PARAM007:BOOL  ; // 离子源高压电源使能到位 
+	PARAM008:BOOL  ; // 离子源高压电源停止使能到位 
+	PARAM009:BOOL  ; // 离子源高压电源正在使能 
+	PARAM010:BOOL  ; // 离子源高压电源正在停止使能 
+	PARAM011:BOOL  ; // 离子源高压电源高压状态 
+	PARAM012:BOOL  ; // 离子源高压电源故障状态 
+	PARAM013:BOOL  ; // 离子源高压电源模式状态 
+	PARAM014:BOOL  ; // 离子源高压电源开启操作错误 
+	PARAM015:BOOL  ; // 离子源高压电源关闭操作错误 
+	PARAM016:BOOL  ; // 离子源高压电源电流设置操作错误 
+	PARAM017:BOOL  ; // 离子源高压电源电压设置操作错误 
+	PARAM018:REAL  ; // 离子源高压电源电流（mA） 
+	PARAM019:REAL  ; // 离子源高压电源电压（kV） 
+	PARAM020:REAL  ; // 灯丝电源电流设置值（A） 
+	PARAM021:REAL  ; // 灯丝电源电压设置值（V） 
+	PARAM022:BOOL  ; // TRUE为灯丝电源就绪 
+	PARAM023:BOOL  ; // 灯丝电源TRUE远控，FALSE本控 
+	PARAM024:BOOL  ; // TRUE为灯丝电源故障 
+	PARAM025:BOOL  ; // TRUE为灯丝电源过压 
+	PARAM026:BOOL  ; // TRUE为灯丝电源过流 
+	PARAM027:BOOL  ; // TRUE为灯丝电源过温 
+	PARAM028:BOOL  ; // 灯丝电源外部连锁，TRUE正常 
+	PARAM029:BOOL  ; // 灯丝电源已经运行 
+	PARAM030:BOOL  ; // 灯丝电源停止运行 
+	PARAM031:BOOL  ; // 灯丝电源正在启动运行 
+	PARAM032:BOOL  ; // 灯丝电源正在停止运行 
+	PARAM033:BOOL  ; // TRUE为灯丝电源控制器正常 
+	PARAM034:BOOL  ; // 灯丝电源电流设置操作错误 
+	PARAM035:BOOL  ; // 灯丝电源电压设置操作错误 
+	PARAM036:REAL  ; // 灯丝电源运行电流（A） 
+	PARAM037:REAL  ; // 灯丝电源运行电压（V） 
+	PARAM038:REAL  ; // 弧压电源电流设置值（A） 
+	PARAM039:REAL  ; // 弧压电源电压设置值（V） 
+	PARAM040:BOOL  ; // TRUE为弧压电源就绪ON 
+	PARAM041:BOOL  ; // 弧压电源TRUE远控，FALSE本控 
+	PARAM042:BOOL  ; // TRUE为弧压电源故障 
+	PARAM043:BOOL  ; // TRUE为弧压电源过压 
+	PARAM044:BOOL  ; // TRUE为弧压电源过流 
+	PARAM045:BOOL  ; // TRUE为弧压电源过温 
+	PARAM046:BOOL  ; // 弧压电源外部连锁，TRUE正常 
+	PARAM047:BOOL  ; // 弧压电源已经运行 
+	PARAM048:BOOL  ; // 弧压电源停止运行 
+	PARAM049:BOOL  ; // 弧压电源正在启动运行 
+	PARAM050:BOOL  ; // 弧压电源正在停止运行 
+	PARAM051:BOOL  ; // TRUE为弧压电源控制器正常
+	PARAM052:BOOL  ; // 弧压电源电流设置操作错误 
+	PARAM053:BOOL  ; // 弧压电源电压设置操作错误 
+	PARAM054:REAL  ; // 弧压电源运行电流（A） 
+	PARAM055:REAL  ; // 弧压电源运行电压（V） 
+	PARAM056:REAL  ; // 等离子体电源电流设置值（A） 
+	PARAM057:REAL  ; // 等离子体电源电压设置值（V） 
+	PARAM058:BOOL  ; // TRUE为等离子体电源就绪ON 
+	PARAM059:BOOL  ; // 等离子体电源TRUE远控，FALSE本控 
+	PARAM060:BOOL  ; // TRUE为等离子体电源故障 
+	PARAM061:BOOL  ; // TRUE为等离子体电源过压 
+	PARAM062:BOOL  ; // TRUE为等离子体电源过流 
+	PARAM063:BOOL  ; // TRUE为等离子体电源过温 
+	PARAM064:BOOL  ; // 等离子体电源外部连锁，TRUE正常 
+	PARAM065:BOOL  ; // 等离子体电源已经运行 
+	PARAM066:BOOL  ; // 等离子体电源停止运行 
+	PARAM067:BOOL  ; // 等离子体电源正在启动运行 
+	PARAM068:BOOL  ; // 等离子体电源正在停止运行 
+	PARAM069:BOOL  ; // TRUE为等离子体电源控制器正常 
+	PARAM070:BOOL  ; // 等离子体电源电流设置操作错误 
+	PARAM071:BOOL  ; // 等离子体电源电压设置操作错误 
+	PARAM072:REAL  ; // 等离子体电源运行电流（A） 
+	PARAM073:REAL  ; // 等离子体电源运行电压（V） 
+	PARAM074:REAL  ; // 吸极电源电流设置值（A） 
+	PARAM075:REAL  ; // 吸极电源电压设置值（V） 
+	PARAM076:BOOL  ; // TRUE为吸极电源就绪ON 
+	PARAM077:BOOL  ; // 吸极电源TRUE远控，FALSE本控 
+	PARAM078:BOOL  ; // TRUE为吸极电源故障 
+	PARAM079:BOOL  ; // TRUE为吸极电源过压 
+	PARAM080:BOOL  ; // TRUE为吸极电源过流 
+	PARAM081:BOOL  ; // TRUE为吸极电源过温 
+	PARAM082:BOOL  ; // 吸极电源外部连锁，TRUE正常 
+	PARAM083:BOOL  ; // 吸极电源已经运行 
+	PARAM084:BOOL  ; // 吸极电源停止运行 
+	PARAM085:BOOL  ; // 吸极电源正在启动运行 
+	PARAM086:BOOL  ; // 吸极电源正在停止运行 
+	PARAM087:BOOL  ; // TRUE为吸极电源控制器正常 
+	PARAM088:BOOL  ; // 吸极电源电流设置操作错误 
+	PARAM089:BOOL  ; // 吸极电源电压设置操作错误 
+	PARAM090:REAL  ; // 吸极电源运行电流（A） 
+	PARAM091:REAL  ; // 吸极电源运行电压（V）
+
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
