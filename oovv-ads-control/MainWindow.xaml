@@ -1,12 +1,61 @@
-﻿<Window x:Class="oovv_ads_control.MainWindow"
+<Window x:Class="oovv_ads_control.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:oovv_ads_control"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="oovv-ads-control" Height="500" Width="900">
     <Grid>
+        <!-- 启动阶段：全屏干净的加载页，不带任何工具栏 -->
+        <ContentControl Content="{Binding CurrentPage}"
+                         Visibility="{Binding IsStartingUp, Converter={StaticResource BooleanToVisibilityConverter}}" />
 
+        <!-- 启动完成后的主界面：常驻连接栏 + 左侧导航 + 页面内容 + 状态栏 -->
+        <Grid Margin="10" Visibility="{Binding IsStartingUp, Converter={StaticResource InverseBooleanToVisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- 常驻连接栏 -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="AmsNetId：" VerticalAlignment="Center" />
+                <TextBox Text="{Binding NetId, UpdateSourceTrigger=PropertyChanged}" Width="140" Margin="4,0" IsEnabled="{Binding IsConnected, Converter={StaticResource InverseBooleanConverter}}" />
+                <TextBlock Text="Port：" VerticalAlignment="Center" Margin="10,0,0,0" />
+                <TextBox Text="{Binding Port, UpdateSourceTrigger=PropertyChanged}" Width="60" Margin="4,0" IsEnabled="{Binding IsConnected, Converter={StaticResource InverseBooleanConverter}}" />
+                <Button Content="连接" Command="{Binding ConnectCommand}" Width="80" Margin="10,0,0,0" />
+                <Button Content="断开" Command="{Binding DisconnectCommand}" Width="80" Margin="6,0,0,0" />
+            </StackPanel>
+
+            <!-- 左侧导航 + 右侧页面内容 -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <ListBox Grid.Column="0"
+                          ItemsSource="{Binding Pages}"
+                          SelectedItem="{Binding CurrentPage}"
+                          DisplayMemberPath="Title"
+                          IsEnabled="{Binding IsConnected}"
+                          Margin="0,0,10,0" />
+
+                <Border Grid.Column="1" BorderBrush="LightGray" BorderThickness="1">
+                    <ContentControl Content="{Binding CurrentPage}" Margin="10" />
+                </Border>
+            </Grid>
+
+            <!-- 常驻状态栏 -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="连接状态：" VerticalAlignment="Center" />
+                <TextBlock Text="{Binding ConnectionStateText}" VerticalAlignment="Center" FontWeight="Bold" Margin="4,0,20,0" />
+                <TextBlock Text="PLC 状态：" VerticalAlignment="Center" />
+                <TextBlock Text="{Binding AdsStateText}" VerticalAlignment="Center" FontWeight="Bold" Margin="4,0,20,0" />
+                <TextBlock Text="{Binding StatusMessage}" VerticalAlignment="Center" Foreground="Gray" />
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

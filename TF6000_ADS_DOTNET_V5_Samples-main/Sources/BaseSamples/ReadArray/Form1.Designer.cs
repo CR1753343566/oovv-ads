@@ -2,49 +2,50 @@ namespace S12_ReadArray
 {
     public partial class Form1
 {
-    #region Windows Form Designer generated code
-    /// <summary>
-    /// Required method for Designer support - do not modify
-    /// the contents of this method with the code editor.
-    /// </summary>
-    private void InitializeComponent()
-    {
-        this.lbArray = new System.Windows.Forms.ListBox();
-        this.btnRead = new System.Windows.Forms.Button();
-        this.SuspendLayout();
-        // 
-        // lbArray
-        // 
-        this.lbArray.ItemHeight = 16;
-        this.lbArray.Location = new System.Drawing.Point(19, 9);
-        this.lbArray.Name = "lbArray";
-        this.lbArray.Size = new System.Drawing.Size(173, 244);
-        this.lbArray.TabIndex = 0;
-        // 
-        // btnRead
-        // 
-        this.btnRead.Location = new System.Drawing.Point(19, 277);
-        this.btnRead.Name = "btnRead";
-        this.btnRead.Size = new System.Drawing.Size(173, 26);
-        this.btnRead.TabIndex = 1;
-        this.btnRead.Text = "Read";
-        this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
-        // 
-        // Form1
-        // 
-        this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
-        this.ClientSize = new System.Drawing.Size(212, 322);
-        this.Controls.Add(this.btnRead);
-        this.Controls.Add(this.lbArray);
-        this.Name = "Form1";
-        this.Text = "Sample12";
-        this.Load += new System.EventHandler(this.Form1_Load);
-        this.ResumeLayout(false);
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            lbArray = new System.Windows.Forms.ListBox();
+            btnRead = new System.Windows.Forms.Button();
+            SuspendLayout();
+            // 
+            // lbArray
+            // 
+            lbArray.ItemHeight = 17;
+            lbArray.Location = new System.Drawing.Point(19, 10);
+            lbArray.Name = "lbArray";
+            lbArray.Size = new System.Drawing.Size(173, 242);
+            lbArray.TabIndex = 0;
+            lbArray.SelectedIndexChanged += lbArray_SelectedIndexChanged;
+            // 
+            // btnRead
+            // 
+            btnRead.Location = new System.Drawing.Point(19, 295);
+            btnRead.Name = "btnRead";
+            btnRead.Size = new System.Drawing.Size(173, 28);
+            btnRead.TabIndex = 1;
+            btnRead.Text = "Read";
+            btnRead.Click += btnRead_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleBaseSize = new System.Drawing.Size(6, 16);
+            ClientSize = new System.Drawing.Size(447, 491);
+            Controls.Add(btnRead);
+            Controls.Add(lbArray);
+            Name = "Form1";
+            Text = "Sample12";
+            Load += Form1_Load;
+            ResumeLayout(false);
 
-    }
-    #endregion
+        }
+        #endregion
 
-    private System.Windows.Forms.Button btnRead;
+        private System.Windows.Forms.Button btnRead;
     private System.ComponentModel.Container components = null;
     private System.Windows.Forms.ListBox lbArray;
 }

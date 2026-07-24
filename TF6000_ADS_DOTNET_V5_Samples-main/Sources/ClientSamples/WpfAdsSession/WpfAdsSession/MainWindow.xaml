@@ -20,7 +20,8 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="128*"/>
             <ColumnDefinition Width="523*"/>
             <ColumnDefinition Width="117*"/>
         </Grid.ColumnDefinitions>
@@ -28,7 +29,7 @@
             <RowDefinition Height="781*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Grid Margin="10,20,10,0" UseLayoutRounding="False" Grid.RowSpan="2" Grid.ColumnSpan="4">
+        <Grid Margin="8,20,10,0" UseLayoutRounding="False" Grid.RowSpan="2" Grid.ColumnSpan="3" Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>

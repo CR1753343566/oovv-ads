@@ -76,191 +76,191 @@ namespace S03_EventReading
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbInt = new System.Windows.Forms.TextBox();
-            this.tbDint = new System.Windows.Forms.TextBox();
-            this.tbSint = new System.Windows.Forms.TextBox();
-            this.tbLreal = new System.Windows.Forms.TextBox();
-            this.tbReal = new System.Windows.Forms.TextBox();
-            this.tbString = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbBool = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            tbInt = new TextBox();
+            tbDint = new TextBox();
+            tbSint = new TextBox();
+            tbLreal = new TextBox();
+            tbReal = new TextBox();
+            tbString = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            tbBool = new TextBox();
+            SuspendLayout();
             // 
             // tbInt
             // 
-            this.tbInt.Location = new System.Drawing.Point(104, 48);
-            this.tbInt.Name = "tbInt";
-            this.tbInt.Size = new System.Drawing.Size(306, 20);
-            this.tbInt.TabIndex = 0;
+            tbInt.Location = new Point(125, 59);
+            tbInt.Name = "tbInt";
+            tbInt.Size = new Size(367, 23);
+            tbInt.TabIndex = 0;
             // 
             // tbDint
             // 
-            this.tbDint.Location = new System.Drawing.Point(104, 80);
-            this.tbDint.Name = "tbDint";
-            this.tbDint.Size = new System.Drawing.Size(306, 20);
-            this.tbDint.TabIndex = 1;
+            tbDint.Location = new Point(125, 98);
+            tbDint.Name = "tbDint";
+            tbDint.Size = new Size(367, 23);
+            tbDint.TabIndex = 1;
             // 
             // tbSint
             // 
-            this.tbSint.Location = new System.Drawing.Point(104, 112);
-            this.tbSint.Name = "tbSint";
-            this.tbSint.Size = new System.Drawing.Size(306, 20);
-            this.tbSint.TabIndex = 2;
+            tbSint.Location = new Point(125, 138);
+            tbSint.Name = "tbSint";
+            tbSint.Size = new Size(367, 23);
+            tbSint.TabIndex = 2;
             // 
             // tbLreal
             // 
-            this.tbLreal.Location = new System.Drawing.Point(104, 144);
-            this.tbLreal.Name = "tbLreal";
-            this.tbLreal.Size = new System.Drawing.Size(306, 20);
-            this.tbLreal.TabIndex = 3;
+            tbLreal.Location = new Point(125, 177);
+            tbLreal.Name = "tbLreal";
+            tbLreal.Size = new Size(367, 23);
+            tbLreal.TabIndex = 3;
             // 
             // tbReal
             // 
-            this.tbReal.Location = new System.Drawing.Point(104, 176);
-            this.tbReal.Name = "tbReal";
-            this.tbReal.Size = new System.Drawing.Size(306, 20);
-            this.tbReal.TabIndex = 4;
+            tbReal.Location = new Point(125, 217);
+            tbReal.Name = "tbReal";
+            tbReal.Size = new Size(367, 23);
+            tbReal.TabIndex = 4;
             // 
             // tbString
             // 
-            this.tbString.Location = new System.Drawing.Point(104, 208);
-            this.tbString.Name = "tbString";
-            this.tbString.Size = new System.Drawing.Size(306, 20);
-            this.tbString.TabIndex = 5;
+            tbString.Location = new Point(125, 256);
+            tbString.Name = "tbString";
+            tbString.Size = new Size(367, 23);
+            tbString.TabIndex = 5;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(8, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 23);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "MAIN.intVal :";
+            label1.Location = new Point(10, 59);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 28);
+            label1.TabIndex = 6;
+            label1.Text = "MAIN.intVal :";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(8, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 23);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "MAIN.dintVal :";
+            label2.Location = new Point(10, 98);
+            label2.Name = "label2";
+            label2.Size = new Size(105, 29);
+            label2.TabIndex = 7;
+            label2.Text = "MAIN.dintVal :";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(8, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 23);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "MAIN.sintVal :";
+            label3.Location = new Point(10, 138);
+            label3.Name = "label3";
+            label3.Size = new Size(105, 28);
+            label3.TabIndex = 8;
+            label3.Text = "MAIN.sintVal :";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(8, 144);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "MAIN.lrealVal :";
+            label4.Location = new Point(10, 177);
+            label4.Name = "label4";
+            label4.Size = new Size(105, 29);
+            label4.TabIndex = 9;
+            label4.Text = "MAIN.lrealVal :";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(8, 176);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 23);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "MAIN.realVal :";
+            label5.Location = new Point(10, 217);
+            label5.Name = "label5";
+            label5.Size = new Size(105, 28);
+            label5.TabIndex = 10;
+            label5.Text = "MAIN.realVal :";
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(8, 208);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 23);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "MAIN.stringVal :";
+            label6.Location = new Point(10, 256);
+            label6.Name = "label6";
+            label6.Size = new Size(105, 28);
+            label6.TabIndex = 11;
+            label6.Text = "MAIN.stringVal :";
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(8, 144);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 23);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "label4";
+            label7.Location = new Point(10, 177);
+            label7.Name = "label7";
+            label7.Size = new Size(86, 29);
+            label7.TabIndex = 9;
+            label7.Text = "label4";
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(8, 112);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 23);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "label3";
+            label8.Location = new Point(10, 138);
+            label8.Name = "label8";
+            label8.Size = new Size(86, 28);
+            label8.TabIndex = 8;
+            label8.Text = "label3";
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(8, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 23);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "label1";
+            label9.Location = new Point(10, 59);
+            label9.Name = "label9";
+            label9.Size = new Size(86, 28);
+            label9.TabIndex = 6;
+            label9.Text = "label1";
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(8, 80);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 23);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "label2";
+            label10.Location = new Point(10, 98);
+            label10.Name = "label10";
+            label10.Size = new Size(86, 29);
+            label10.TabIndex = 7;
+            label10.Text = "label2";
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(8, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 23);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "MAIN.boolVal :";
+            label11.Location = new Point(10, 20);
+            label11.Name = "label11";
+            label11.Size = new Size(105, 28);
+            label11.TabIndex = 13;
+            label11.Text = "MAIN.boolVal :";
             // 
             // tbBool
             // 
-            this.tbBool.Location = new System.Drawing.Point(104, 16);
-            this.tbBool.Name = "tbBool";
-            this.tbBool.Size = new System.Drawing.Size(306, 20);
-            this.tbBool.TabIndex = 12;
+            tbBool.Location = new Point(125, 20);
+            tbBool.Name = "tbBool";
+            tbBool.Size = new Size(367, 23);
+            tbBool.TabIndex = 12;
             // 
             // Form1
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(422, 275);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.tbBool);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbString);
-            this.Controls.Add(this.tbReal);
-            this.Controls.Add(this.tbLreal);
-            this.Controls.Add(this.tbSint);
-            this.Controls.Add(this.tbDint);
-            this.Controls.Add(this.tbInt);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Closing += new System.ComponentModel.CancelEventHandler(this.Form1_Closing);
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(680, 494);
+            Controls.Add(label11);
+            Controls.Add(tbBool);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(tbString);
+            Controls.Add(tbReal);
+            Controls.Add(tbLreal);
+            Controls.Add(tbSint);
+            Controls.Add(tbDint);
+            Controls.Add(tbInt);
+            Controls.Add(label7);
+            Controls.Add(label8);
+            Controls.Add(label9);
+            Controls.Add(label10);
+            Name = "Form1";
+            Text = "Form1";
+            Closing += Form1_Closing;
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

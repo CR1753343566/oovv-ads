@@ -2,8 +2,21 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:oovv_ads_control"
+             xmlns:converters="clr-namespace:oovv_ads_control.Converters"
+             xmlns:pageVm="clr-namespace:oovv_ads_control.ViewModels.Pages"
+             xmlns:pageViews="clr-namespace:oovv_ads_control.Views.Pages"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <converters:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter" />
+
+        <!-- 页面 ViewModel -> View 的映射：新增页面时在这里加一条 DataTemplate -->
+        <DataTemplate DataType="{x:Type pageVm:DashboardViewModel}">
+            <pageViews:DashboardView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type pageVm:ConnectingViewModel}">
+            <pageViews:ConnectingView />
+        </DataTemplate>
     </Application.Resources>
 </Application>

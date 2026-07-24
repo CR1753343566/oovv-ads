@@ -1,0 +1,15 @@
+<UserControl x:Class="oovv_ads_control.Views.Pages.ConnectingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             Background="White">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="320">
+            <TextBlock Text="oovv-ads-control" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,32" />
+            <ProgressBar Minimum="0" Maximum="100" Value="{Binding Progress, Mode=OneWay}" Height="6" Margin="0,0,0,16" />
+            <TextBlock Text="{Binding StatusText}" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Foreground="Gray" />
+        </StackPanel>
+    </Grid>
+</UserControl>

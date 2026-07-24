@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="SymbolsWindow" Height="768" Width="1024">
     <Grid>
-        <Grid Margin="0,6,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="0,6,0,0" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="Auto"/>

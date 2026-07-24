@@ -55,82 +55,81 @@ namespace S11_ReadWriteDateTime
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent()
-		{
-			this.label1 = new System.Windows.Forms.Label();
-			this.btnWrite = new System.Windows.Forms.Button();
-			this.btnRead = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.SuspendLayout();
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(8, 16);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(72, 21);
-			this.label1.TabIndex = 7;
-			this.label1.Text = "MAIN.Time1:";
-			// 
-			// btnWrite
-			// 
-			this.btnWrite.Location = new System.Drawing.Point(240, 48);
-			this.btnWrite.Name = "btnWrite";
-			this.btnWrite.Size = new System.Drawing.Size(72, 24);
-			this.btnWrite.TabIndex = 6;
-			this.btnWrite.Text = "Write";
-			this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
-			// 
-			// btnRead
-			// 
-			this.btnRead.Location = new System.Drawing.Point(240, 16);
-			this.btnRead.Name = "btnRead";
-			this.btnRead.Size = new System.Drawing.Size(72, 24);
-			this.btnRead.TabIndex = 5;
-			this.btnRead.Text = "Read";
-			this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(80, 16);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(144, 20);
-			this.textBox1.TabIndex = 4;
-			this.textBox1.Text = "";
-			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(8, 48);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(72, 21);
-			this.label2.TabIndex = 9;
-			this.label2.Text = "MAIN.Date1:";
-			// 
-			// textBox2
-			// 
-			this.textBox2.Location = new System.Drawing.Point(80, 48);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(144, 20);
-			this.textBox2.TabIndex = 8;
-			this.textBox2.Text = "";
-			// 
-			// Form1
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(320, 85);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.btnWrite);
-			this.Controls.Add(this.btnRead);
-			this.Controls.Add(this.textBox1);
-			this.Name = "Form1";
-			this.Text = "Form1";
-			this.Closing += new System.ComponentModel.CancelEventHandler(this.Form1_Closing);
-			this.Load += new System.EventHandler(this.Form1_Load);
-			this.ResumeLayout(false);
+        {
+            label1 = new Label();
+            btnWrite = new Button();
+            btnRead = new Button();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.Location = new Point(10, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(86, 26);
+            label1.TabIndex = 7;
+            label1.Text = "MAIN.Time1:";
+            // 
+            // btnWrite
+            // 
+            btnWrite.Location = new Point(288, 59);
+            btnWrite.Name = "btnWrite";
+            btnWrite.Size = new Size(86, 30);
+            btnWrite.TabIndex = 6;
+            btnWrite.Text = "Write";
+            btnWrite.Click += btnWrite_Click;
+            // 
+            // btnRead
+            // 
+            btnRead.Location = new Point(288, 20);
+            btnRead.Name = "btnRead";
+            btnRead.Size = new Size(86, 29);
+            btnRead.TabIndex = 5;
+            btnRead.Text = "Read";
+            btnRead.Click += btnRead_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(96, 20);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(173, 23);
+            textBox1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.Location = new Point(10, 59);
+            label2.Name = "label2";
+            label2.Size = new Size(86, 26);
+            label2.TabIndex = 9;
+            label2.Text = "MAIN.Date1:";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(96, 59);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(173, 23);
+            textBox2.TabIndex = 8;
+            // 
+            // Form1
+            // 
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(670, 308);
+            Controls.Add(label2);
+            Controls.Add(textBox2);
+            Controls.Add(label1);
+            Controls.Add(btnWrite);
+            Controls.Add(btnRead);
+            Controls.Add(textBox1);
+            Name = "Form1";
+            Text = "Form1";
+            Closing += Form1_Closing;
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
 
-		}
+        }
 
         /// <summary>
 		/// The main entry point for the application.
