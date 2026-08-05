@@ -5,10 +5,54 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
              Background="White">
+    <UserControl.Resources>
+        <!-- 斑马纹填充：一个被斜切的竖条，在 DrawingBrush 里平铺，靠 Transform（绝对像素，不随元素宽度缩放）的 X 偏移做滚动动画 -->
+        <DrawingBrush x:Key="StripeBrush" TileMode="Tile" Viewport="0,0,16,16" ViewportUnits="Absolute" Opacity="0.35">
+            <DrawingBrush.Transform>
+                <TranslateTransform X="0" />
+            </DrawingBrush.Transform>
+            <DrawingBrush.Drawing>
+                <GeometryDrawing Brush="White">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry Rect="0,0,8,16">
+                            <RectangleGeometry.Transform>
+                                <SkewTransform AngleX="-30" CenterX="4" CenterY="8" />
+                            </RectangleGeometry.Transform>
+                        </RectangleGeometry>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+
+        <Style x:Key="StripedProgressBarStyle" TargetType="ProgressBar">
+            <Setter Property="Foreground" Value="#2563EB" />
+            <Setter Property="Background" Value="#E5E7EB" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ProgressBar">
+                        <Grid>
+                            <Border x:Name="PART_Track" Background="{TemplateBinding Background}" CornerRadius="5" />
+                            <Border x:Name="PART_Indicator"
+                                    HorizontalAlignment="Left"
+                                    Background="{TemplateBinding Foreground}"
+                                    CornerRadius="5"
+                                    ClipToBounds="True">
+                                <Border Background="{StaticResource StripeBrush}" />
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="320">
             <TextBlock Text="oovv-ads-control" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,32" />
-            <ProgressBar Minimum="0" Maximum="100" Value="{Binding Progress, Mode=OneWay}" Height="6" Margin="0,0,0,16" />
+            <ProgressBar Minimum="0" Maximum="100" Value="{Binding Progress, Mode=OneWay}"
+                         Style="{StaticResource StripedProgressBarStyle}"
+                         Height="10" Margin="0,0,0,16" />
             <TextBlock Text="{Binding StatusText}" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Foreground="Gray" />
         </StackPanel>
     </Grid>

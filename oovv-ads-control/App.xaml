@@ -10,6 +10,17 @@
         <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
         <converters:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter" />
+        <converters:BoolToStringConverter x:Key="BoolToStringConverter" />
+
+        <!--
+            全局图标资源方案：Button.Content 直接写图标的 pack URI 字符串（比如 "/Assets/Icons/clear.png"），
+            套上这个 ContentTemplate 就会被渲染成图标，而不是显示文字。跟 Button 具体用哪个 Style（大小/间距）无关，
+            两者独立叠加：Style="{StaticResource XxxButtonStyle}" ContentTemplate="{StaticResource IconContentTemplate}"。
+            新图标只要按 Assets/Icons/xxx.png 这个约定放进去，.csproj 里是通配符引用，不用改工程文件。
+        -->
+        <DataTemplate x:Key="IconContentTemplate">
+            <Image Source="{Binding}" Width="28" Height="28" Stretch="Uniform" />
+        </DataTemplate>
 
         <!-- 页面 ViewModel -> View 的映射：新增页面时在这里加一条 DataTemplate -->
         <DataTemplate DataType="{x:Type pageVm:DashboardViewModel}">

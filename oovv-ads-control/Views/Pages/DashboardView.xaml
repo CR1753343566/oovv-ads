@@ -7,5 +7,33 @@
     <StackPanel Margin="10">
         <TextBlock Text="仪表盘页面（占位） - 是否已连接：" />
         <TextBlock Text="{Binding IsConnected}" Margin="0,8,0,0" FontWeight="Bold" />
+
+        <TextBlock Text="Read_BLVac3_Values_To_PC 监听：" Margin="0,20,0,0" />
+        <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+            <TextBlock Text="Param026（低真空已达标）：" />
+            <TextBlock Text="{Binding Param026}" FontWeight="Bold" Margin="4,0,0,0" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+            <TextBlock Text="Param027（分子泵输出频率 Hz）：" />
+            <TextBlock Text="{Binding Param027}" FontWeight="Bold" Margin="4,0,0,0" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+            <TextBlock Text="Param028（低真空度 mbar）：" />
+            <TextBlock Text="{Binding Param028}" FontWeight="Bold" Margin="4,0,0,0" />
+        </StackPanel>
+
+        <TextBlock Text="Com_StripperEleMach 监听：" Margin="0,20,0,0" />
+        <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+            <TextBlock Text="轴1绝对位置（fEM_C_AbPos_Axis1）：" VerticalAlignment="Center" />
+            <TextBlock Text="{Binding AbPosAxis1}" FontWeight="Bold" Margin="4,0,10,0" VerticalAlignment="Center" />
+            <Button Content="编辑" Command="{Binding EditAbPosAxis1Command}" Width="70" />
+        </StackPanel>
+
+        <TextBlock Text="字母数字键盘测试：" Margin="0,20,0,0" />
+        <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+            <TextBlock Text="文本：" VerticalAlignment="Center" />
+            <TextBlock Text="{Binding EditableText}" FontWeight="Bold" Margin="4,0,10,0" VerticalAlignment="Center" />
+            <Button Content="编辑" Command="{Binding EditTextCommand}" Width="70" />
+        </StackPanel>
     </StackPanel>
 </UserControl>

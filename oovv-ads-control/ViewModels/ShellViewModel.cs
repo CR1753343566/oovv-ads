@@ -1,11 +1,14 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Threading;
+using Serilog;
 using TwinCAT;
 using TwinCAT.Ads;
 using oovv_ads_control.Ads;
+using oovv_ads_control.Services;
 using oovv_ads_control.ViewModels.Pages;
 
 namespace oovv_ads_control.ViewModels
@@ -17,7 +20,11 @@ namespace oovv_ads_control.ViewModels
     /// </summary>
     public sealed class ShellViewModel : ViewModelBase, IDisposable
     {
+        private static readonly ILogger Logger = Log.ForContext<ShellViewModel>();
+
         private readonly AdsConnectionManager _connectionManager = new();
+        private readonly PlcNotificationService _notificationService;
+        private readonly PlcVariableService _variableService;
         private readonly Dispatcher _dispatcher = Dispatcher.CurrentDispatcher;
 
         //private string _netId = AmsNetId.Local.ToString();
@@ -31,10 +38,16 @@ namespace oovv_ads_control.ViewModels
         private IPageViewModel? _currentPage;
         private readonly ConnectingViewModel _connectingPage = new();
 
-        private static readonly TimeSpan ConnectCycleDuration = TimeSpan.FromSeconds(5);
+        private static readonly TimeSpan RampDuration = TimeSpan.FromSeconds(5);
+        private const double RampHoldProgress = 95;
+        private static readonly TimeSpan FinishDuration = TimeSpan.FromMilliseconds(1000);
+        private static readonly TimeSpan RetryDelay = TimeSpan.FromSeconds(1);
 
         public ShellViewModel()
         {
+            _notificationService = new PlcNotificationService(_connectionManager);
+            _variableService = new PlcVariableService(_connectionManager);
+
             _connectionManager.SessionStateChanged += (_, e) =>
                 _dispatcher.Invoke(() => HandleStateChanged($"Session: {e.OldState} -> {e.NewState}（原因：{e.Reason}）"));
 
@@ -51,12 +64,24 @@ namespace oovv_ads_control.ViewModels
                     AddMessage($"PLC 状态变为 {e.State.AdsState}");
                 });
 
+            // 断线的唯一状态同步入口——不管是手动点"断开"、心跳检测失败主动断开，还是 ConnectAsync
+            // 失败时的内部清理，都会经过 AdsConnectionManager.Disconnect()，从而统一触发这里，
+            // 保证连接状态栏不会因为某条路径没同步而显示成过期的"已连接"。
+            _connectionManager.Disconnected += (_, _) =>
+                _dispatcher.Invoke(() =>
+                {
+                    ConnectionStateText = ConnectionState.None.ToString();
+                    AdsStateText = AdsState.Invalid.ToString();
+                    RaiseConnectionChanged();
+                });
+
             ConnectCommand = new RelayCommand(async _ => await ConnectAsync(), _ => !IsConnected && !IsBusy);
             DisconnectCommand = new RelayCommand(_ => Disconnect(), _ => IsConnected);
 
-            // 新增页面：在这里 Pages.Add(new XxxViewModel(_connectionManager))，
+            // 新增页面：在这里 Pages.Add(new XxxViewModel(_connectionManager))，需要订阅变量变化的话
+            // 再传一个 _notificationService，需要按需读写变量的话再传一个 _variableService；
             // 并在 App.xaml 里给 XxxViewModel 加一条 DataTemplate 指向 XxxView。
-            Pages.Add(new DashboardViewModel(_connectionManager));
+            Pages.Add(new DashboardViewModel(_connectionManager, _notificationService, _variableService));
 
             CurrentPage = _connectingPage;
 
@@ -96,6 +121,12 @@ namespace oovv_ads_control.ViewModels
 
         public bool IsConnected => _connectionManager.IsConnected;
 
+        /// <summary>系统级 PLC 变量订阅服务，页面需要监听变量变化时通过构造函数拿这同一个实例。</summary>
+        public PlcNotificationService NotificationService => _notificationService;
+
+        /// <summary>系统级 PLC 变量按需读写服务，页面需要读写变量时通过构造函数拿这同一个实例。</summary>
+        public PlcVariableService VariableService => _variableService;
+
         public bool IsBusy
         {
             get => _isBusy;
@@ -127,31 +158,34 @@ namespace oovv_ads_control.ViewModels
         public ICommand DisconnectCommand { get; }
 
         /// <summary>
-        /// 启动时的自动连接流程：每一轮用 5 秒进度条动画。
-        /// 5 秒内连上 -> 立刻取消动画、进首页；5 秒内没连上 -> 补齐这一轮动画后重新再来一轮，直到连接成功。
+        /// 启动时的自动连接流程：进度条只爬升一次——RampDuration 内从 0 爬到 RampHoldProgress（90%），
+        /// 如果这期间还没连上，就停在 90% 原地等待，后台继续重试；不管是爬升途中还是停留等待时连上，
+        /// 都会立刻从当前进度快速冲到 100%（FinishDuration），再进首页——不会出现"瞬间跳转无感知"。
         /// </summary>
         private async System.Threading.Tasks.Task StartupConnectAsync()
         {
             CurrentPage = _connectingPage;
+            _connectingPage.StatusText = "正在连接 PLC...";
+
+            using var rampCts = new CancellationTokenSource();
+            var rampTask = _connectingPage.RunRampAsync(RampDuration, RampHoldProgress, rampCts.Token);
 
             while (!IsConnected)
             {
-                _connectingPage.StatusText = "正在连接 PLC...";
-
-                using var cts = new CancellationTokenSource();
-                var progressTask = _connectingPage.AnimateProgressAsync(ConnectCycleDuration, cts.Token);
-
                 await ConnectAsync();
 
                 if (IsConnected)
-                {
-                    cts.Cancel();
                     break;
-                }
 
                 _connectingPage.StatusText = $"连接失败，正在重试...（{StatusMessage}）";
-                await progressTask; // 补齐这一轮的 5 秒节奏，避免连接瞬间失败时疯狂空转重试
+                await Task.Delay(RetryDelay);
             }
+
+            rampCts.Cancel();
+            await rampTask; // 等爬升动画彻底停下来，避免和下面的冲刺动画同时改 Progress
+
+            _connectingPage.StatusText = "连接成功，正在进入首页...";
+            await _connectingPage.RunFinishAsync(FinishDuration);
 
             CurrentPage = Pages.Count > 0 ? Pages[0] : null;
             IsStartingUp = false;
@@ -188,11 +222,9 @@ namespace oovv_ads_control.ViewModels
 
         private void Disconnect()
         {
+            // 状态栏刷新统一交给上面的 Disconnected 事件处理，这里只需要发起断开 + 记一条用户可读的消息
             _connectionManager.Disconnect();
-            ConnectionStateText = ConnectionState.None.ToString();
-            AdsStateText = AdsState.Invalid.ToString();
             AddMessage("已断开连接");
-            RaiseConnectionChanged();
         }
 
         private void HandleStateChanged(string message)
@@ -213,9 +245,20 @@ namespace oovv_ads_control.ViewModels
             var line = $"{DateTime.Now:HH:mm:ss} {message}";
             Messages.Add(line);
             StatusMessage = message;
-            System.Diagnostics.Debug.WriteLine(line);
+            Logger.Information("{Message}", message);
         }
 
-        public void Dispose() => _connectionManager.Dispose();
+        public void Dispose()
+        {
+            foreach (var page in Pages)
+            {
+                if (page is IDisposable disposablePage)
+                    disposablePage.Dispose();
+            }
+
+            _notificationService.Dispose();
+            _variableService.Dispose();
+            _connectionManager.Dispose();
+        }
     }
 }

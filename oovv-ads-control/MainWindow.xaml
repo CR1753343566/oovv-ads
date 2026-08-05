@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:oovv_ads_control"
         mc:Ignorable="d"
-        Title="oovv-ads-control" Height="500" Width="900">
+        Title="ads-control" Height="500" Width="900">
     <Grid>
         <!-- 启动阶段：全屏干净的加载页，不带任何工具栏 -->
         <ContentControl Content="{Binding CurrentPage}"

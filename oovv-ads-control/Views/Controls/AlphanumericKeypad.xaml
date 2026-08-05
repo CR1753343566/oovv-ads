@@ -1,0 +1,28 @@
+<UserControl x:Class="oovv_ads_control.Views.Controls.AlphanumericKeypad"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <!--
+        触摸屏虚拟字母数字键盘：按键网格是代码里根据 AlphanumericKeyboardLayout.Keys 动态生成的，
+        这份 XAML 本身不手写按钮。依赖宿主 DataContext 是 TextInputDialogViewModel。
+    -->
+    <UserControl.Resources>
+        <Style x:Key="KeyButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="MinHeight" Value="44" />
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="KeyboardGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- 列定义在 code-behind 里按 AlphanumericKeyboardLayout.ColumnCount 循环生成 -->
+    </Grid>
+</UserControl>
