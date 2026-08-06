@@ -6,44 +6,49 @@
         xmlns:controls="clr-namespace:oovv_ads_control.Views.Controls"
         mc:Ignorable="d"
         Title="{Binding Title}"
-        Width="680" SizeToContent="Height"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
-        ShowInTaskbar="False">
+        ShowInTaskbar="False"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <!-- 尺寸（屏幕宽 80% / 高 50%）在 code-behind 里按 SystemParameters 算，不写死像素 -->
     <Grid Margin="16">
+        <!-- ESC 行占 1 份，键盘占 5 份——跟 AlphanumericKeypad 内部 5 行的比例对齐，
+             这样 ESC 行的高度天然等于键盘每一行的高度，不用两边分别写死数字再对齐 -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="5*" />
         </Grid.RowDefinitions>
 
-        <!-- 顶部：ESC + 输入框（带光标，IsReadOnly 防止触发系统触屏软键盘）+ 取消/确认图标 -->
-        <Grid Grid.Row="0" Margin="0,0,0,12">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-
-            <Button Grid.Column="0" Content="ESC" Command="{Binding CancelCommand}" Width="60" Height="40" Margin="0,0,8,0" />
+        <!-- 顶部：ESC + 输入框（带光标，IsReadOnly 防止触发系统触屏软键盘）+ 取消/确认图标
+             这一整行空白处（TextBox 之外没有控件的地方）和窗口 Margin 区域都能拖动整个弹窗，
+             因为按钮/输入框会先消费掉点击事件，不会跟 Window_MouseLeftButtonDown 的拖动逻辑冲突。
+             列不是这里手写的 Auto/*/Auto/Auto——跟键盘共用同一套 AlphanumericKeyboardLayout.ColumnCount（62）列坐标系，
+             在 code-behind 里生成，这样 ESC 的宽度就能用"跟哪个键一样宽"来描述，不用猜像素：
+             ESC=8 列（跟 Caps 一样宽）、输入框=42 列、取消/确认图标各 6 列。 -->
+        <Grid x:Name="HeaderGrid" Grid.Row="0">
+            <!-- 高度不再写死：MinHeight="44" 跟 AlphanumericKeypad 的 KeyButtonStyle 完全一致，
+                 配合所在行是 1*（跟键盘 5 行同比例），两边会拉伸到同一个实际高度。
+                 MinWidth 显式清零：盖掉 App.xaml 里全局 Button 样式的 MinWidth=88——
+                 现在宽度由 ColumnSpan 决定，不该再被这个全局最小宽度干扰。 -->
+            <Button Grid.Column="0" Grid.ColumnSpan="8" Content="ESC" Command="{Binding CancelCommand}" MinWidth="0" MinHeight="44" FontSize="16" Margin="2,0,8,0" />
 
             <!-- CaretIndex 不是依赖属性，不能用 Binding——光标位置在 code-behind 里手动同步 -->
-            <TextBox x:Name="InputTextBox" Grid.Column="1"
+            <TextBox x:Name="InputTextBox" Grid.Column="8" Grid.ColumnSpan="42"
                      Text="{Binding Text, Mode=OneWay}"
                      IsReadOnly="True"
                      FontSize="20" Padding="8" VerticalContentAlignment="Center" />
 
-            <Button Grid.Column="2" Margin="8,0,0,0" Width="44" Height="40"
+            <Button Grid.Column="50" Grid.ColumnSpan="6" Margin="8,0,0,0" MinWidth="0" MinHeight="44"
                     ContentTemplate="{StaticResource IconContentTemplate}"
                     Content="/Assets/Icons/exit.png"
                     Command="{Binding CancelCommand}" />
-            <Button Grid.Column="3" Margin="8,0,0,0" Width="44" Height="40"
+            <Button Grid.Column="56" Grid.ColumnSpan="6" Margin="8,0,2,0" MinWidth="0" MinHeight="44"
                     ContentTemplate="{StaticResource IconContentTemplate}"
                     Content="/Assets/Icons/submit.png"
                     Command="{Binding SaveCommand}" />
         </Grid>
 
-        <!-- 虚拟字母数字键盘 -->
-        <controls:AlphanumericKeypad Grid.Row="1" Height="360" />
+        <!-- 虚拟字母数字键盘：填满剩下的空间（窗口总高已经是屏幕 50%，这里不用再写死高度） -->
+        <controls:AlphanumericKeypad Grid.Row="1" />
     </Grid>
 </Window>

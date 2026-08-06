@@ -48,8 +48,8 @@
     </UserControl.Resources>
 
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="320">
-            <TextBlock Text="oovv-ads-control" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,32" />
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="420">
+            <TextBlock Text="oovv-ads-control" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,32" />
             <ProgressBar Minimum="0" Maximum="100" Value="{Binding Progress, Mode=OneWay}"
                          Style="{StaticResource StripedProgressBarStyle}"
                          Height="10" Margin="0,0,0,16" />

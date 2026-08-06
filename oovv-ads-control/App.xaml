@@ -29,5 +29,30 @@
         <DataTemplate DataType="{x:Type pageVm:ConnectingViewModel}">
             <pageViews:ConnectingView />
         </DataTemplate>
+
+        <!--
+            全局默认控件尺寸：目标硬件是 15 寸 4:3 触摸屏（1024x768，外接倍福 Win10 工控机），
+            WPF 默认控件尺寸（Button/TextBox 大约 21px 高）远够不到触摸屏可靠点击的下限。
+            这里用不带 x:Key 的隐式 Style（TargetType 直接命中所有该类型控件），全项目自动生效；
+            已经显式指定了自己 Style 的控件（比如 NumericKeypad/AlphanumericKeypad 里的按键）不受影响，
+            因为显式 Style 的优先级高于这种隐式的全局默认值。以后新页面不用每个控件都手动加尺寸，
+            不满足触摸场景才需要单独覆盖。
+        -->
+        <Style TargetType="Button">
+            <Setter Property="MinHeight" Value="48" />
+            <Setter Property="MinWidth" Value="88" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Padding" Value="12,6" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="MinHeight" Value="40" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Padding" Value="6,4" />
+        </Style>
+        <Style TargetType="ListBoxItem">
+            <Setter Property="MinHeight" Value="48" />
+            <Setter Property="Padding" Value="10,8" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
     </Application.Resources>
 </Application>

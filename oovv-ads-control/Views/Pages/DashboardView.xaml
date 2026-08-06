@@ -29,7 +29,7 @@
             <Button Content="编辑" Command="{Binding EditAbPosAxis1Command}" Width="70" />
         </StackPanel>
 
-        <TextBlock Text="字母数字键盘测试：" Margin="0,20,0,0" />
+                 <TextBlock Text="字母数字键盘测试：" Margin="0,20,0,0" />
         <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
             <TextBlock Text="文本：" VerticalAlignment="Center" />
             <TextBlock Text="{Binding EditableText}" FontWeight="Bold" Margin="4,0,10,0" VerticalAlignment="Center" />

@@ -5,7 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:oovv_ads_control"
         mc:Ignorable="d"
-        Title="ads-control" Height="500" Width="900">
+        Title="ads-control"
+        Width="1024" Height="768"
+        WindowStyle="None"
+        WindowState="Maximized"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="True">
+    <!--
+        Kiosk 模式：15 寸 4:3 触摸屏（1024x768），外接在倍福 Win10 工控机上，要求全屏铺满、
+        不带标题栏/边框、不可拖动缩放。全项目所有页面/弹窗都要按这个 4:3、约 1024x768 的可用空间来设计。
+    -->
     <Grid>
         <!-- 启动阶段：全屏干净的加载页，不带任何工具栏 -->
         <ContentControl Content="{Binding CurrentPage}"
