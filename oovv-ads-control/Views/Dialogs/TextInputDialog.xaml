@@ -32,11 +32,19 @@
                  现在宽度由 ColumnSpan 决定，不该再被这个全局最小宽度干扰。 -->
             <Button Grid.Column="0" Grid.ColumnSpan="8" Content="ESC" Command="{Binding CancelCommand}" MinWidth="0" MinHeight="44" FontSize="16" Margin="2,0,8,0" />
 
-            <!-- CaretIndex 不是依赖属性，不能用 Binding——光标位置在 code-behind 里手动同步 -->
+            <!-- CaretIndex 不是依赖属性，不能用 Binding；而且 IsReadOnly 的 TextBox 本来就不渲染原生光标
+                 （不管有没有焦点），所以 Focusable 也直接关掉——光标是下面那根 CaretIndicator 自己画的 -->
             <TextBox x:Name="InputTextBox" Grid.Column="8" Grid.ColumnSpan="42"
                      Text="{Binding Text, Mode=OneWay}"
                      IsReadOnly="True"
+                     Focusable="False"
                      FontSize="20" Padding="8" VerticalContentAlignment="Center" />
+
+            <!-- 自绘光标：位置和闪烁都在 code-behind 里手动控制（TextInputDialog.xaml.cs 的 UpdateCaret）-->
+            <Rectangle x:Name="CaretIndicator" Grid.Column="8" Grid.ColumnSpan="42"
+                       Width="2" Fill="Black"
+                       HorizontalAlignment="Left" VerticalAlignment="Center" Height="26"
+                       IsHitTestVisible="False" />
 
             <Button Grid.Column="50" Grid.ColumnSpan="6" Margin="8,0,0,0" MinWidth="0" MinHeight="44"
                     ContentTemplate="{StaticResource IconContentTemplate}"

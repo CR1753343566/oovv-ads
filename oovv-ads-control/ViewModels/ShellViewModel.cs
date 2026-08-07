@@ -167,6 +167,15 @@ namespace oovv_ads_control.ViewModels
             CurrentPage = _connectingPage;
             _connectingPage.StatusText = "正在连接 PLC...";
 
+#if DEBUG
+            // 开发阶段不卡在这里等连接成功，直接进首页；后台继续尝试连接，真接上 PLC 之后
+            // PlcNotificationService/PlcVariableService 会自动补上（它们本来就是"没连接也能先注册，
+            // 连上了自动补"的设计），页面数据会自己从默认值刷新成真实值。
+            _ = ConnectAsync();
+            CurrentPage = Pages.Count > 0 ? Pages[0] : null;
+            IsStartingUp = false;
+#else
+            // Release 构建：必须真正连接成功才能进首页，行为不变
             using var rampCts = new CancellationTokenSource();
             var rampTask = _connectingPage.RunRampAsync(RampDuration, RampHoldProgress, rampCts.Token);
 
@@ -189,6 +198,7 @@ namespace oovv_ads_control.ViewModels
 
             CurrentPage = Pages.Count > 0 ? Pages[0] : null;
             IsStartingUp = false;
+#endif
         }
 
         /// <summary>
